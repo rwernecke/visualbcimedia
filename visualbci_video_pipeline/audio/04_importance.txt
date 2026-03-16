@@ -1,0 +1,1 @@
+EEG matters because it is noninvasive, fast, and useful in medicine, research, and brain-computer interfaces. It helps us study attention, detect seizures, and build systems that respond to brain activity.

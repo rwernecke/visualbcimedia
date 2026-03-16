@@ -1,0 +1,611 @@
+{
+  "topic": "What is EEG?",
+  "total_duration": 50.36,
+  "segments": [
+    {
+      "id": "hook",
+      "title": "Hook",
+      "start": 0.0,
+      "end": 9.39,
+      "duration": 9.39,
+      "text": "What if we could watch the brain think in real time? Electroencephalography, or EEG, gives us a window into the electrical rhythms of the brain.",
+      "word_timings": [
+        {
+          "word": "What",
+          "start": 0.0,
+          "end": 0.376
+        },
+        {
+          "word": "if",
+          "start": 0.376,
+          "end": 0.752
+        },
+        {
+          "word": "we",
+          "start": 0.752,
+          "end": 1.128
+        },
+        {
+          "word": "could",
+          "start": 1.128,
+          "end": 1.504
+        },
+        {
+          "word": "watch",
+          "start": 1.504,
+          "end": 1.88
+        },
+        {
+          "word": "the",
+          "start": 1.88,
+          "end": 2.256
+        },
+        {
+          "word": "brain",
+          "start": 2.256,
+          "end": 2.632
+        },
+        {
+          "word": "think",
+          "start": 2.632,
+          "end": 3.008
+        },
+        {
+          "word": "in",
+          "start": 3.008,
+          "end": 3.384
+        },
+        {
+          "word": "real",
+          "start": 3.384,
+          "end": 3.76
+        },
+        {
+          "word": "time?",
+          "start": 3.76,
+          "end": 4.136
+        },
+        {
+          "word": "Electroencephalography,",
+          "start": 4.136,
+          "end": 4.512
+        },
+        {
+          "word": "or",
+          "start": 4.512,
+          "end": 4.888
+        },
+        {
+          "word": "EEG,",
+          "start": 4.888,
+          "end": 5.264
+        },
+        {
+          "word": "gives",
+          "start": 5.264,
+          "end": 5.64
+        },
+        {
+          "word": "us",
+          "start": 5.64,
+          "end": 6.016
+        },
+        {
+          "word": "a",
+          "start": 6.016,
+          "end": 6.392
+        },
+        {
+          "word": "window",
+          "start": 6.392,
+          "end": 6.768
+        },
+        {
+          "word": "into",
+          "start": 6.768,
+          "end": 7.144
+        },
+        {
+          "word": "the",
+          "start": 7.144,
+          "end": 7.52
+        },
+        {
+          "word": "electrical",
+          "start": 7.52,
+          "end": 7.896
+        },
+        {
+          "word": "rhythms",
+          "start": 7.896,
+          "end": 8.272
+        },
+        {
+          "word": "of",
+          "start": 8.272,
+          "end": 8.648
+        },
+        {
+          "word": "the",
+          "start": 8.648,
+          "end": 9.024
+        },
+        {
+          "word": "brain.",
+          "start": 9.024,
+          "end": 9.4
+        }
+      ]
+    },
+    {
+      "id": "measurements",
+      "title": "What EEG Measures",
+      "start": 9.39,
+      "end": 21.9,
+      "duration": 12.51,
+      "text": "EEG measures tiny voltage changes at the scalp caused by large groups of neurons firing together. Electrodes do not read thoughts directly. They detect synchronized electrical activity.",
+      "word_timings": [
+        {
+          "word": "EEG",
+          "start": 9.39,
+          "end": 9.853
+        },
+        {
+          "word": "measures",
+          "start": 9.853,
+          "end": 10.316
+        },
+        {
+          "word": "tiny",
+          "start": 10.316,
+          "end": 10.779
+        },
+        {
+          "word": "voltage",
+          "start": 10.779,
+          "end": 11.242
+        },
+        {
+          "word": "changes",
+          "start": 11.242,
+          "end": 11.705
+        },
+        {
+          "word": "at",
+          "start": 11.705,
+          "end": 12.168
+        },
+        {
+          "word": "the",
+          "start": 12.168,
+          "end": 12.631
+        },
+        {
+          "word": "scalp",
+          "start": 12.631,
+          "end": 13.094
+        },
+        {
+          "word": "caused",
+          "start": 13.094,
+          "end": 13.557
+        },
+        {
+          "word": "by",
+          "start": 13.557,
+          "end": 14.02
+        },
+        {
+          "word": "large",
+          "start": 14.02,
+          "end": 14.483
+        },
+        {
+          "word": "groups",
+          "start": 14.483,
+          "end": 14.946
+        },
+        {
+          "word": "of",
+          "start": 14.946,
+          "end": 15.409
+        },
+        {
+          "word": "neurons",
+          "start": 15.409,
+          "end": 15.872
+        },
+        {
+          "word": "firing",
+          "start": 15.872,
+          "end": 16.335
+        },
+        {
+          "word": "together.",
+          "start": 16.335,
+          "end": 16.798
+        },
+        {
+          "word": "Electrodes",
+          "start": 16.798,
+          "end": 17.261
+        },
+        {
+          "word": "do",
+          "start": 17.261,
+          "end": 17.724
+        },
+        {
+          "word": "not",
+          "start": 17.724,
+          "end": 18.187
+        },
+        {
+          "word": "read",
+          "start": 18.187,
+          "end": 18.65
+        },
+        {
+          "word": "thoughts",
+          "start": 18.65,
+          "end": 19.113
+        },
+        {
+          "word": "directly.",
+          "start": 19.113,
+          "end": 19.576
+        },
+        {
+          "word": "They",
+          "start": 19.576,
+          "end": 20.039
+        },
+        {
+          "word": "detect",
+          "start": 20.039,
+          "end": 20.502
+        },
+        {
+          "word": "synchronized",
+          "start": 20.502,
+          "end": 20.965
+        },
+        {
+          "word": "electrical",
+          "start": 20.965,
+          "end": 21.428
+        },
+        {
+          "word": "activity.",
+          "start": 21.428,
+          "end": 21.891
+        }
+      ]
+    },
+    {
+      "id": "brain_waves",
+      "title": "Brain Waves Overview",
+      "start": 21.9,
+      "end": 35.64,
+      "duration": 13.74,
+      "text": "These signals are often grouped into brain wave bands like delta, theta, alpha, beta, and gamma. Each band is linked with different states such as sleep, relaxation, focus, and active processing.",
+      "word_timings": [
+        {
+          "word": "These",
+          "start": 21.9,
+          "end": 22.343
+        },
+        {
+          "word": "signals",
+          "start": 22.343,
+          "end": 22.786
+        },
+        {
+          "word": "are",
+          "start": 22.786,
+          "end": 23.229
+        },
+        {
+          "word": "often",
+          "start": 23.229,
+          "end": 23.672
+        },
+        {
+          "word": "grouped",
+          "start": 23.672,
+          "end": 24.115
+        },
+        {
+          "word": "into",
+          "start": 24.115,
+          "end": 24.558
+        },
+        {
+          "word": "brain",
+          "start": 24.558,
+          "end": 25.001
+        },
+        {
+          "word": "wave",
+          "start": 25.001,
+          "end": 25.444
+        },
+        {
+          "word": "bands",
+          "start": 25.444,
+          "end": 25.887
+        },
+        {
+          "word": "like",
+          "start": 25.887,
+          "end": 26.33
+        },
+        {
+          "word": "delta,",
+          "start": 26.33,
+          "end": 26.773
+        },
+        {
+          "word": "theta,",
+          "start": 26.773,
+          "end": 27.216
+        },
+        {
+          "word": "alpha,",
+          "start": 27.216,
+          "end": 27.659
+        },
+        {
+          "word": "beta,",
+          "start": 27.659,
+          "end": 28.102
+        },
+        {
+          "word": "and",
+          "start": 28.102,
+          "end": 28.545
+        },
+        {
+          "word": "gamma.",
+          "start": 28.545,
+          "end": 28.988
+        },
+        {
+          "word": "Each",
+          "start": 28.988,
+          "end": 29.431
+        },
+        {
+          "word": "band",
+          "start": 29.431,
+          "end": 29.874
+        },
+        {
+          "word": "is",
+          "start": 29.874,
+          "end": 30.317
+        },
+        {
+          "word": "linked",
+          "start": 30.317,
+          "end": 30.76
+        },
+        {
+          "word": "with",
+          "start": 30.76,
+          "end": 31.203
+        },
+        {
+          "word": "different",
+          "start": 31.203,
+          "end": 31.646
+        },
+        {
+          "word": "states",
+          "start": 31.646,
+          "end": 32.089
+        },
+        {
+          "word": "such",
+          "start": 32.089,
+          "end": 32.532
+        },
+        {
+          "word": "as",
+          "start": 32.532,
+          "end": 32.975
+        },
+        {
+          "word": "sleep,",
+          "start": 32.975,
+          "end": 33.418
+        },
+        {
+          "word": "relaxation,",
+          "start": 33.418,
+          "end": 33.861
+        },
+        {
+          "word": "focus,",
+          "start": 33.861,
+          "end": 34.304
+        },
+        {
+          "word": "and",
+          "start": 34.304,
+          "end": 34.747
+        },
+        {
+          "word": "active",
+          "start": 34.747,
+          "end": 35.19
+        },
+        {
+          "word": "processing.",
+          "start": 35.19,
+          "end": 35.633
+        }
+      ]
+    },
+    {
+      "id": "importance",
+      "title": "Why EEG Matters",
+      "start": 35.64,
+      "end": 50.36,
+      "duration": 14.72,
+      "text": "EEG matters because it is noninvasive, fast, and useful in medicine, research, and brain-computer interfaces. It helps us study attention, detect seizures, and build systems that respond to brain activity.",
+      "word_timings": [
+        {
+          "word": "EEG",
+          "start": 35.64,
+          "end": 36.131
+        },
+        {
+          "word": "matters",
+          "start": 36.131,
+          "end": 36.622
+        },
+        {
+          "word": "because",
+          "start": 36.622,
+          "end": 37.113
+        },
+        {
+          "word": "it",
+          "start": 37.113,
+          "end": 37.604
+        },
+        {
+          "word": "is",
+          "start": 37.604,
+          "end": 38.095
+        },
+        {
+          "word": "noninvasive,",
+          "start": 38.095,
+          "end": 38.586
+        },
+        {
+          "word": "fast,",
+          "start": 38.586,
+          "end": 39.077
+        },
+        {
+          "word": "and",
+          "start": 39.077,
+          "end": 39.568
+        },
+        {
+          "word": "useful",
+          "start": 39.568,
+          "end": 40.059
+        },
+        {
+          "word": "in",
+          "start": 40.059,
+          "end": 40.55
+        },
+        {
+          "word": "medicine,",
+          "start": 40.55,
+          "end": 41.041
+        },
+        {
+          "word": "research,",
+          "start": 41.041,
+          "end": 41.532
+        },
+        {
+          "word": "and",
+          "start": 41.532,
+          "end": 42.023
+        },
+        {
+          "word": "brain-computer",
+          "start": 42.023,
+          "end": 42.514
+        },
+        {
+          "word": "interfaces.",
+          "start": 42.514,
+          "end": 43.005
+        },
+        {
+          "word": "It",
+          "start": 43.005,
+          "end": 43.496
+        },
+        {
+          "word": "helps",
+          "start": 43.496,
+          "end": 43.987
+        },
+        {
+          "word": "us",
+          "start": 43.987,
+          "end": 44.478
+        },
+        {
+          "word": "study",
+          "start": 44.478,
+          "end": 44.969
+        },
+        {
+          "word": "attention,",
+          "start": 44.969,
+          "end": 45.46
+        },
+        {
+          "word": "detect",
+          "start": 45.46,
+          "end": 45.951
+        },
+        {
+          "word": "seizures,",
+          "start": 45.951,
+          "end": 46.442
+        },
+        {
+          "word": "and",
+          "start": 46.442,
+          "end": 46.933
+        },
+        {
+          "word": "build",
+          "start": 46.933,
+          "end": 47.424
+        },
+        {
+          "word": "systems",
+          "start": 47.424,
+          "end": 47.915
+        },
+        {
+          "word": "that",
+          "start": 47.915,
+          "end": 48.406
+        },
+        {
+          "word": "respond",
+          "start": 48.406,
+          "end": 48.897
+        },
+        {
+          "word": "to",
+          "start": 48.897,
+          "end": 49.388
+        },
+        {
+          "word": "brain",
+          "start": 49.388,
+          "end": 49.879
+        },
+        {
+          "word": "activity.",
+          "start": 49.879,
+          "end": 50.37
+        }
+      ]
+    }
+  ]
+}

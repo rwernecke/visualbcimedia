@@ -1,0 +1,4 @@
+file '/Users/rafael/visualbcimedia/visualbci_video_pipeline/audio/01_hook.wav'
+file '/Users/rafael/visualbcimedia/visualbci_video_pipeline/audio/02_measurements.wav'
+file '/Users/rafael/visualbcimedia/visualbci_video_pipeline/audio/03_brain_waves.wav'
+file '/Users/rafael/visualbcimedia/visualbci_video_pipeline/audio/04_importance.wav'

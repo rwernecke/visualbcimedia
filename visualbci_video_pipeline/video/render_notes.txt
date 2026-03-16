@@ -1,0 +1,1 @@
+Rendered slide-based segment videos with baked captions and waveform overlays.

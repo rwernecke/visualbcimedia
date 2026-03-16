@@ -1,0 +1,13 @@
+Topic: What is EEG?
+
+[Hook]
+What if we could watch the brain think in real time? Electroencephalography, or EEG, gives us a window into the electrical rhythms of the brain.
+
+[What EEG Measures]
+EEG measures tiny voltage changes at the scalp caused by large groups of neurons firing together. Electrodes do not read thoughts directly. They detect synchronized electrical activity.
+
+[Brain Waves Overview]
+These signals are often grouped into brain wave bands like delta, theta, alpha, beta, and gamma. Each band is linked with different states such as sleep, relaxation, focus, and active processing.
+
+[Why EEG Matters]
+EEG matters because it is noninvasive, fast, and useful in medicine, research, and brain-computer interfaces. It helps us study attention, detect seizures, and build systems that respond to brain activity.

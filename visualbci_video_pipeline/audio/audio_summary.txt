@@ -1,0 +1,7 @@
+Requested voice: alba
+Voice used: Reed
+
+01 Hook: 9.39s
+02 What EEG Measures: 12.51s
+03 Brain Waves Overview: 13.74s
+04 Why EEG Matters: 14.72s

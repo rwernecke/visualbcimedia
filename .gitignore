@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+visualbci_video_pipeline/__pycache__/
+visualbci_video_pipeline/audio/*.aiff
+visualbci_video_pipeline/audio/*.wav
+visualbci_video_pipeline/video/assets/
+visualbci_video_pipeline/video/segments/
+visualbci_video_pipeline/video/.swift-cache/
+visualbci_video_pipeline/final/*.mp4
+visualbci_video_pipeline/reels/*.mp4

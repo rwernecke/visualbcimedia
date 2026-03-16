@@ -1,0 +1,15 @@
+1
+00:00:00,000 --> 00:00:09,390
+What if we could watch the brain think in real time? Electroencephalography, or EEG, gives us a window into the electrical rhythms of the brain.
+
+2
+00:00:09,390 --> 00:00:21,900
+EEG measures tiny voltage changes at the scalp caused by large groups of neurons firing together. Electrodes do not read thoughts directly. They detect synchronized electrical activity.
+
+3
+00:00:21,900 --> 00:00:35,640
+These signals are often grouped into brain wave bands like delta, theta, alpha, beta, and gamma. Each band is linked with different states such as sleep, relaxation, focus, and active processing.
+
+4
+00:00:35,640 --> 00:00:50,360
+EEG matters because it is noninvasive, fast, and useful in medicine, research, and brain-computer interfaces. It helps us study attention, detect seizures, and build systems that respond to brain activity.
