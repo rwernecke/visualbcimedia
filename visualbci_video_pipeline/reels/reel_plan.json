@@ -2,33 +2,33 @@
   "clips": [
     {
       "id": "reel_01",
-      "title": "EEG Hook",
+      "title": "One EEG Mistake Almost Every Beginner Makes",
       "start": 0.0,
-      "end": 9.39,
-      "duration": 9.39,
+      "end": 12.25,
+      "duration": 12.25,
       "aspect_ratio": "9:16",
       "resolution": "1080x1920",
-      "crop": "crop=607:1080:(in_w-607)/2:0"
+      "source": "/Users/rafael/visualbcimedia/visualbci_video_pipeline/video/segments/01_beginner_mistake.mp4"
     },
     {
       "id": "reel_02",
-      "title": "What EEG Measures",
-      "start": 9.39,
-      "end": 21.9,
-      "duration": 12.51,
+      "title": "Your Brain Produces Electricity",
+      "start": 12.25,
+      "end": 21.47,
+      "duration": 9.22,
       "aspect_ratio": "9:16",
       "resolution": "1080x1920",
-      "crop": "crop=607:1080:(in_w-607)/2:0"
+      "source": "/Users/rafael/visualbcimedia/visualbci_video_pipeline/video/segments/02_brain_electricity.mp4"
     },
     {
       "id": "reel_03",
-      "title": "Why EEG Matters",
-      "start": 35.64,
-      "end": 50.36,
-      "duration": 14.72,
+      "title": "You Don't Need a PhD to Analyze EEG",
+      "start": 21.47,
+      "end": 32.36,
+      "duration": 10.89,
       "aspect_ratio": "9:16",
       "resolution": "1080x1920",
-      "crop": "crop=607:1080:(in_w-607)/2:0"
+      "source": "/Users/rafael/visualbcimedia/visualbci_video_pipeline/video/segments/03_no_phd.mp4"
     }
   ]
 }

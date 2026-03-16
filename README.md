@@ -1,13 +1,19 @@
-# VisualBCI Video Pipeline
+# Viral Brain Video Pipeline
 
-This repository contains a starter pipeline for generating the first VisualBCI
-educational lesson video, "What is EEG?", plus short-form reel plans derived
-from the same lesson.
+This repository contains a short-form brain video pipeline optimized for
+Instagram Reels and TikTok. The stack is:
 
-The project follows the structure requested in the PDF instructions:
+- `manim` for visuals
+- `ElevenLabs` for voice
+- `ffmpeg` for captions, composition, and vertical exports
+
+The current content direction prioritizes curiosity, beautiful visuals, strong
+hooks, short duration, and high production quality over lectures or product
+promotion.
 
 ```text
 visualbci_video_pipeline/
+  manim_scene.py
   generate_audio.py
   build_timings.py
   scenes.py
@@ -24,12 +30,12 @@ visualbci_video_pipeline/
 
 ## What it does today
 
-- stores the first lesson script and visual direction
-- generates narration text files and a `pocket-tts` command plan
-- estimates per-segment timings
-- builds a scene manifest for animation/rendering
-- generates an SRT caption file
-- creates ffmpeg command plans for the full lesson and three reels
+- stores short, hook-first brain reel scripts
+- generates ElevenLabs narration command plans
+- estimates timings from rendered or fallback audio
+- builds a Manim scene manifest for each segment
+- overlays animated captions and waveform styling with ffmpeg
+- creates ffmpeg command plans for the assembled full video and reels
 
 ## Quick start
 
@@ -42,17 +48,15 @@ python3 visualbci_video_pipeline/compose_video.py
 python3 visualbci_video_pipeline/generate_reels.py
 ```
 
-Outputs are written into the subfolders under
-`visualbci_video_pipeline/`.
+Outputs are written into the subfolders under `visualbci_video_pipeline/`.
 
-## External tools
+## Requirements
 
-The scaffold assumes these tools may later be used:
+- `ELEVENLABS_API_KEY`
+- `ELEVENLABS_VOICE_ID`
+- `manim`
+- `ffmpeg`
 
-- `pocket-tts` for narration with the `alba` voice
-- `manim` for educational visuals
-- `modal` for cloud rendering orchestration
-- `ffmpeg` for composition and reel exports
-
-If those tools are not installed, the scripts still generate manifests and
-shell command plans so the pipeline can be reviewed and extended.
+If ElevenLabs credentials or Manim are missing, the pipeline still writes the
+required command plans and manifests so the workflow can be completed once the
+environment is ready.

@@ -1,7 +1,7 @@
-Requested voice: alba
-Voice used: Reed
+Voice engine: ElevenLabs
+Voice target: Daniel - Steady Broadcaster
+Voice status: configured
 
-01 Hook: 9.39s
-02 What EEG Measures: 12.51s
-03 Brain Waves Overview: 13.74s
-04 Why EEG Matters: 14.72s
+01 Your Brain Can Fake a Signal: 12.25s
+02 Your Brain Produces Electricity: 9.22s
+03 You Do Not Need a PhD: 10.89s

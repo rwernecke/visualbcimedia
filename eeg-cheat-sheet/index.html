@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The VisualBCI EEG Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="print-frame"></div>
+    <main class="guide">
+      <section class="sheet hero-sheet">
+        <div class="page-shell hero-shell">
+          <div class="section-eyebrow">VisualBCI Guide</div>
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="hero-kicker">Premium VisualBCI Guide</div>
+              <h1>The VisualBCI EEG Guide</h1>
+              <p class="hero-subtitle">
+                Learn to interpret EEG signals and explore your own recordings
+                with VisualBCI
+              </p>
+              <p class="hero-value-line">
+                13-page guide • visual examples • beginner friendly
+              </p>
+              <div class="hero-questions">
+                <span>Why can't I focus?</span>
+                <span>Does eyes-closed alpha change?</span>
+                <span>Is this signal real or just noise?</span>
+              </div>
+              <p class="hero-intro">
+                Your brain is electrical. EEG, or electroencephalography, is one
+                of the simplest ways to observe brain activity from outside the
+                body, but at first most recordings just look like confusing
+                lines.
+              </p>
+              <p class="hero-intro">
+                This guide helps you go from “EEG looks interesting” to
+                actually understanding what to look for in your own recordings
+                inside VisualBCI: whether a trace looks noisy, what changes
+                when you close your eyes, which patterns may relate to
+                attention or relaxation, and what might be signal versus
+                artifact.
+              </p>
+              <p class="hero-intro">
+                The goal is not diagnosis. The goal is learning how to interpret
+                signals, inspect recordings in VisualBCI, and explore your own
+                data with more confidence.
+              </p>
+              <div class="benefits-card">
+                <div class="card-label">What you'll learn to do</div>
+                <ul class="benefits-list">
+                  <li>Interpret EEG traces instead of staring at random lines</li>
+                  <li>Recognize alpha rhythms, artifacts, and the core brain-wave bands</li>
+                  <li>Explore patterns linked to attention, relaxation, and signal quality</li>
+                  <li>Understand what changes when you close your eyes</li>
+                  <li>Use VisualBCI to inspect recordings and investigate what you see</li>
+                </ul>
+              </div>
+              <p class="hero-bridge">
+                This guide shows you how to read EEG signals. VisualBCI lets you
+                explore them.
+              </p>
+            </div>
+            <div class="hero-visual">
+              <div class="signal-panel">
+                <div class="signal-meta">
+                  <span>VisualBCI insight preview</span>
+                  <span>Annotated signal readout</span>
+                </div>
+                <svg viewBox="0 0 520 320" class="hero-signal" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="signalGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.15" />
+                      <stop offset="45%" stop-color="#7dd3fc" stop-opacity="0.95" />
+                      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.18" />
+                    </linearGradient>
+                    <linearGradient id="panelFade" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#10192c" />
+                      <stop offset="100%" stop-color="#0b1220" />
+                    </linearGradient>
+                    <linearGradient id="traceHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#dbeafe" stop-opacity="0.2" />
+                      <stop offset="55%" stop-color="#ffffff" stop-opacity="0.95" />
+                      <stop offset="100%" stop-color="#dbeafe" stop-opacity="0.2" />
+                    </linearGradient>
+                    <linearGradient id="rowHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.06" />
+                      <stop offset="50%" stop-color="#7dd3fc" stop-opacity="0.16" />
+                      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.06" />
+                    </linearGradient>
+                    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+                      <feGaussianBlur stdDeviation="5" result="blur" />
+                      <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  <rect width="520" height="320" rx="26" fill="url(#panelFade)" />
+                  <rect x="22" y="22" width="476" height="54" rx="16" fill="#172036" />
+                  <circle cx="42" cy="49" r="6" fill="#38bdf8" />
+                  <circle cx="61" cy="49" r="6" fill="#1d4ed8" opacity="0.65" />
+                  <text x="82" y="41" class="signal-ui">session</text>
+                  <text x="82" y="59" class="signal-title">Resting-State Preview</text>
+                  <rect x="362" y="34" width="110" height="28" rx="14" fill="#0f172a" stroke="#334155" />
+                  <circle cx="378" cy="48" r="5" fill="#7dd3fc" />
+                  <text x="392" y="53" class="signal-chip">quality: stable</text>
+                  <rect x="30" y="90" width="460" height="60" rx="20" fill="rgba(15,23,42,0.34)" stroke="rgba(148,163,184,0.16)" />
+                  <rect x="30" y="168" width="460" height="92" rx="22" fill="url(#rowHighlight)" stroke="rgba(125,211,252,0.22)" />
+                  <g opacity="0.14">
+                    <path d="M40 110H480" stroke="#cbd5e1" />
+                    <path d="M40 138H480" stroke="#cbd5e1" />
+                    <path d="M40 186H480" stroke="#cbd5e1" />
+                    <path d="M40 214H480" stroke="#cbd5e1" />
+                    <path d="M40 242H480" stroke="#cbd5e1" />
+                    <path d="M90 82V274" stroke="#cbd5e1" />
+                    <path d="M170 82V274" stroke="#cbd5e1" />
+                    <path d="M250 82V274" stroke="#cbd5e1" />
+                    <path d="M330 82V274" stroke="#cbd5e1" />
+                    <path d="M410 82V274" stroke="#cbd5e1" />
+                  </g>
+                  <rect x="44" y="99" width="94" height="20" rx="10" fill="#0f172a" stroke="#334155" />
+                  <rect x="44" y="176" width="102" height="20" rx="10" fill="#082f49" stroke="#38bdf8" stroke-opacity="0.55" />
+                  <text x="58" y="113" class="signal-label">eyes open</text>
+                  <text x="58" y="190" class="signal-label">eyes closed</text>
+                  <text x="355" y="113" class="signal-chip">posterior channels</text>
+                  <path
+                    d="M48 131
+                    C63 122, 79 121, 95 131
+                    S127 142, 143 131
+                    S175 121, 191 131
+                    S223 142, 239 131
+                    S271 121, 287 131
+                    S319 142, 335 131
+                    S367 121, 383 131
+                    S415 142, 431 131
+                    S455 122, 475 131"
+                    fill="none"
+                    stroke="#93c5fd"
+                    stroke-width="3.4"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M48 223
+                    C63 180, 79 180, 95 223
+                    S127 266, 143 223
+                    S175 180, 191 223
+                    S223 266, 239 223
+                    S271 180, 287 223
+                    S319 266, 335 223
+                    S367 180, 383 223
+                    S415 266, 431 223
+                    S455 180, 475 223"
+                    fill="none"
+                    stroke="url(#signalGlow)"
+                    stroke-width="10"
+                    stroke-linecap="round"
+                    filter="url(#softGlow)"
+                  />
+                  <path
+                    d="M48 223
+                    C63 180, 79 180, 95 223
+                    S127 266, 143 223
+                    S175 180, 191 223
+                    S223 266, 239 223
+                    S271 180, 287 223
+                    S319 266, 335 223
+                    S367 180, 383 223
+                    S415 266, 431 223
+                    S455 180, 475 223"
+                    fill="none"
+                    stroke="url(#traceHighlight)"
+                    stroke-width="2.6"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M392 130C408 130 419 119 419 102C419 92 428 86 441 86"
+                    fill="none"
+                    stroke="#7dd3fc"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M83 125C70 119 61 108 61 91C61 73 49 61 33 55"
+                    fill="none"
+                    stroke="#cbd5e1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M242 220C254 220 264 211 264 197C264 179 279 170 298 170"
+                    fill="none"
+                    stroke="#7dd3fc"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <rect x="430" y="77" width="64" height="18" rx="9" fill="#082f49" stroke="#38bdf8" stroke-opacity="0.55" />
+                  <rect x="10" y="40" width="74" height="18" rx="9" fill="#1e293b" stroke="#475569" />
+                  <rect x="286" y="154" width="160" height="18" rx="9" fill="#082f49" stroke="#38bdf8" stroke-opacity="0.55" />
+                  <text x="441" y="89" class="signal-note">alpha rise</text>
+                  <text x="22" y="53" class="signal-note signal-note-top">blink artifact</text>
+                  <text x="302" y="167" class="signal-note">rhythm becomes clearer</text>
+                  <text x="45" y="286" class="signal-ui">VisualBCI highlights rhythm changes, artifacts, and signal quality.</text>
+                </svg>
+              </div>
+              <div class="hero-microcard">
+                <div class="card-label">VisualBCI connection</div>
+                <p>
+                  Learn the concepts here, then apply them directly inside
+                  VisualBCI to inspect signals, spot artifacts, and explore
+                  patterns related to attention, relaxation, and signal changes.
+                </p>
+              </div>
+              <div class="inside-card hero-inside-card">
+                <div class="card-label">Inside this guide</div>
+                <div class="inside-grid">
+                  <div>What EEG actually measures, in plain English</div>
+                  <div>The five main brain-wave bands and what patterns may matter</div>
+                  <div>How to spot alpha, artifacts, and common beginner mistakes</div>
+                  <div>How to use VisualBCI to inspect signals and explore your own recordings</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sheet">
+        <div class="page-shell">
+          <div class="page-top">
+            <div class="section-eyebrow">01</div>
+            <h2>What EEG Actually Measures</h2>
+          </div>
+          <div class="two-column">
+            <div>
+              <p class="lead">
+                EEG stands for electroencephalography. It records tiny voltage
+                fluctuations detected at the scalp using electrodes placed on the
+                head.
+              </p>
+              <p>
+                Those signals do not come from a single neuron. They reflect the
+                summed activity of large populations of neurons, especially
+                synchronized postsynaptic activity in the cortex.
+              </p>
+              <p>
+                EEG is not a mind-reading tool. It does not decode private
+                thoughts in a direct way.
+              </p>
+              <p>
+                What it does well is show how brain activity changes over time,
+                millisecond by millisecond.
+              </p>
+              <p>
+                That is EEG's strength: excellent temporal resolution. Compared
+                with some brain imaging methods, its spatial precision is more
+                limited, so it is better at telling you <em>when</em> activity
+                changes than exactly <em>where</em> it started.
+              </p>
+              <aside class="callout key-callout">
+                <div class="card-label">Key idea</div>
+                <p>
+                  EEG is best thought of as a fast, noninvasive way to track
+                  changes in brain activity over time.
+                </p>
+              </aside>
+            </div>
+            <div>
+              <div class="diagram-card">
+                <svg viewBox="0 0 520 420" class="diagram-svg" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="brainFlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#e0f2fe" />
+                      <stop offset="100%" stop-color="#60a5fa" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="18" y="18" width="484" height="384" rx="28" fill="#f8fbff" stroke="#dbe6f1" />
+                  <text x="74" y="78" class="diagram-label">neurons firing</text>
+                  <text x="212" y="212" class="diagram-label">scalp electrodes</text>
+                  <text x="360" y="335" class="diagram-label">EEG signal</text>
+                  <g transform="translate(64 110)">
+                    <circle cx="0" cy="0" r="14" fill="url(#brainFlow)" />
+                    <circle cx="78" cy="32" r="14" fill="url(#brainFlow)" />
+                    <circle cx="52" cy="96" r="14" fill="url(#brainFlow)" />
+                    <circle cx="134" cy="96" r="14" fill="url(#brainFlow)" />
+                    <path d="M14 0H64M10 8L44 78M66 40L56 82M92 38L122 84" stroke="#93c5fd" stroke-width="5" stroke-linecap="round" />
+                  </g>
+                  <path d="M186 148C226 118 283 109 329 131C369 150 394 185 401 228" fill="none" stroke="#cbd5e1" stroke-width="18" stroke-linecap="round" />
+                  <path d="M242 118C276 95 312 91 347 109" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round" />
+                  <g fill="#60a5fa">
+                    <circle cx="253" cy="109" r="5" />
+                    <circle cx="294" cy="100" r="5" />
+                    <circle cx="336" cy="104" r="5" />
+                  </g>
+                  <path d="M261 156L261 246M296 150L296 238M331 154L331 242" stroke="#60a5fa" stroke-width="3" stroke-linecap="round" />
+                  <path d="M352 265H448" stroke="#dbe6f1" stroke-width="10" stroke-linecap="round" />
+                  <path
+                    d="M356 264
+                    C366 248, 377 248, 388 264
+                    S408 280, 420 264
+                    S435 245, 446 264"
+                    fill="none"
+                    stroke="#0f172a"
+                    stroke-width="3.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sheet mistakes-sheet">
+        <div class="page-shell">
+          <div class="page-top">
+            <div class="section-eyebrow">02</div>
+            <h2>Common Beginner Mistakes</h2>
+          </div>
+          <p class="section-intro">
+            These are the mistakes people make most often when they first start
+            inspecting EEG recordings in VisualBCI.
+          </p>
+          <div class="mistake-list">
+            <article class="mistake-card">
+              <div class="mistake-num">1</div>
+              <div>
+                <h3>Assuming every waveform is meaningful brain activity</h3>
+                <p>Many visible changes come from eyes, face muscles, movement, or hardware issues.</p>
+              </div>
+            </article>
+            <article class="mistake-card">
+              <div class="mistake-num">2</div>
+              <div>
+                <h3>Treating brain waves as rigid labels for mental states</h3>
+                <p>Alpha, beta, and theta are useful categories, but real brains are more mixed and context-dependent.</p>
+              </div>
+            </article>
+            <article class="mistake-card">
+              <div class="mistake-num">3</div>
+              <div>
+                <h3>Ignoring artifacts</h3>
+                <p>Artifact recognition is not optional. It is part of basic EEG literacy.</p>
+              </div>
+            </article>
+            <article class="mistake-card">
+              <div class="mistake-num">4</div>
+              <div>
+                <h3>Overinterpreting a single short segment</h3>
+                <p>One interesting-looking moment rarely tells the full story without more context.</p>
+              </div>
+            </article>
+            <article class="mistake-card">
+              <div class="mistake-num">5</div>
+              <div>
+                <h3>Confusing amplitude with “better” or “worse” activity</h3>
+                <p>Bigger signals are not automatically more important, healthier, or more meaningful.</p>
+              </div>
+            </article>
+            <article class="mistake-card">
+              <div class="mistake-num">6</div>
+              <div>
+                <h3>Forgetting that electrode location matters</h3>
+                <p>Where the signal is measured changes what patterns are most plausible to expect.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sheet">
+        <div class="page-shell">
+          <div class="page-top">
+            <div class="section-eyebrow">03</div>
+            <h2>The Five Main Brain Waves</h2>
+            <p class="section-intro">
+              These bands are frequency ranges commonly used to describe EEG
+              rhythms in VisualBCI and other EEG tools.
+            </p>
+            <p class="section-intro">
+              They are useful shorthand, not rigid labels. A band can become
+              more or less prominent depending on task, location, state, and
+              artifact.
+            </p>
+          </div>
+          <div class="wave-grid">
+            <article class="wave-card delta">
+              <div class="wave-header">
+                <h3>Delta</h3>
+                <span>~0.5–4 Hz</span>
+              </div>
+              <p class="wave-association">Often associated with deep sleep</p>
+              <p>
+                Very slow oscillations. In healthy awake adults, strong delta can
+                be unusual outside specific contexts.
+              </p>
+            </article>
+            <article class="wave-card theta">
+              <div class="wave-header">
+                <h3>Theta</h3>
+                <span>~4–8 Hz</span>
+              </div>
+              <p class="wave-association">
+                Often linked to drowsiness, memory processes, meditation
+              </p>
+              <p>
+                Slightly faster than delta and common in transitional states. It
+                can also appear during focused internal processing.
+              </p>
+            </article>
+            <article class="wave-card alpha">
+              <div class="wave-header">
+                <h3>Alpha</h3>
+                <span>~8–12 Hz</span>
+              </div>
+              <p class="wave-association">
+                Relaxed wakefulness, especially with eyes closed
+              </p>
+              <p>
+                One of the easiest rhythms for beginners to recognize, especially
+                over posterior regions.
+              </p>
+            </article>
+            <article class="wave-card beta">
+              <div class="wave-header">
+                <h3>Beta</h3>
+                <span>~12–30 Hz</span>
+              </div>
+              <p class="wave-association">
+                Alert thinking and active mental engagement
+              </p>
+              <p>
+                Faster, lower-amplitude activity often seen during wakeful,
+                engaged states.
+              </p>
+            </article>
+            <article class="wave-card gamma">
+              <div class="wave-header">
+                <h3>Gamma</h3>
+                <span>~30+ Hz</span>
+              </div>
+              <p class="wave-association">
+                Often discussed in relation to complex processing
+              </p>
+              <p>
+                Interesting in theory, but harder to measure cleanly with scalp
+                EEG because muscle activity can contaminate the same range.
+              </p>
+            </article>
+          </div>
+          <div class="bottom-note">
+            Brain waves are descriptive categories, not one-to-one translations of
+            your mental state.
+          </div>
+        </div>
+      </section>
+
+      <section class="sheet">
+        <div class="page-shell">
+          <div class="page-top">
+            <div class="section-eyebrow">04</div>
+            <h2>What Changes When You Close Your Eyes</h2>
+          </div>
+          <div class="two-column eyes-layout">
+            <div>
+              <p class="lead">
+                In many people, alpha activity becomes more prominent when the
+                eyes are closed and the person is relaxed but awake.
+              </p>
+              <p>
+                This effect is often strongest in posterior or occipital regions,
+                where visual processing is heavily represented. When the eyes
+                open, the rhythm often becomes less obvious.
+              </p>
+              <div class="takeaway-box">
+                <div class="card-label">Takeaway</div>
+                <p>
+                  Closing your eyes often increases alpha rhythm because the
+                  visual system is less engaged.
+                </p>
+              </div>
+            </div>
+            <div class="comparison-card">
+              <div class="comparison-head">
+                <span>Eyes Open</span>
+                <span>Eyes Closed</span>
+              </div>
+              <svg viewBox="0 0 520 330" class="comparison-svg" aria-hidden="true">
+                <rect x="10" y="18" width="230" height="284" rx="24" fill="#f8fafc" stroke="#dbe6f1" />
+                <rect x="280" y="18" width="230" height="284" rx="24" fill="#eff6ff" stroke="#bfdbfe" />
+                <text x="50" y="54" class="mini-label">Lower visible alpha</text>
+                <text x="318" y="54" class="mini-label">Stronger alpha rhythm</text>
+                <path d="M30 170C44 162 53 156 64 168S86 193 98 171S122 142 137 163S163 199 176 173S201 144 220 170" fill="none" stroke="#475569" stroke-width="3" stroke-linecap="round" />
+                <path d="M300 170C315 135 326 129 339 170S364 211 378 170S403 129 417 170S441 211 455 170S481 129 492 170" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" />
+                <g fill="#0f172a">
+                  <circle cx="70" cy="244" r="18" />
+                  <circle cx="350" cy="244" r="18" />
+                </g>
+                <path d="M54 244C62 237 78 237 86 244" stroke="#f8fafc" stroke-width="3" fill="none" />
+                <path d="M334 244C342 251 358 251 366 244" stroke="#f8fafc" stroke-width="3" fill="none" />
+                <text x="38" y="282" class="mini-note">posterior rhythm less distinct</text>
+                <text x="308" y="282" class="mini-note">posterior alpha stands out more</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sheet">
+        <div class="page-shell">
+          <div class="page-top">
+            <div class="section-eyebrow">05</div>
+            <h2>Signal vs Artifact</h2>
+          </div>
+          <p class="section-intro">
+            Not everything in an EEG trace you see in VisualBCI is brain activity.
+          </p>
+          <p class="section-intro">
+            One of the first real EEG skills in VisualBCI is learning to
+            distinguish signal from artifact.
+          </p>
+          <div class="artifact-grid">
+            <article class="artifact-card">
+              <h3>Eye blinks</h3>
+              <p>Large, slow deflections that are often strongest in frontal channels.</p>
+            </article>
+            <article class="artifact-card">
+              <h3>Jaw clenching / muscle activity</h3>
+              <p>Fast, noisy, high-frequency contamination that can make the trace look fuzzy.</p>
+            </article>
+            <article class="artifact-card">
+              <h3>Movement</h3>
+              <p>Abrupt disturbances, sharp shifts, or wandering baseline changes from motion.</p>
+            </article>
+            <article class="artifact-card">
+              <h3>Poor electrode contact / line noise</h3>
+              <p>Unstable channels or repetitive unwanted patterns caused by bad contact or electrical interference.</p>
+            </article>
+          </div>
+          <aside class="callout artifact-callout">
+            <div class="card-label">Signal vs artifact</div>
+            <p>
+              One of the most important EEG skills is learning to separate signal
+              from artifact.
+            </p>
+          </aside>
+          <div class="artifact-strip">
+            <div class="artifact-trace">
+              <span>Blink</span>
+              <svg viewBox="0 0 280 72" aria-hidden="true">
+                <path d="M4 40C30 39 38 38 50 42S76 48 88 9S116 55 144 40S205 37 276 40" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="artifact-trace">
+              <span>Muscle</span>
+              <svg viewBox="0 0 280 72" aria-hidden="true">
+                <path d="M3 38L13 30L24 43L33 29L45 42L55 28L67 46L80 27L93 41L106 30L117 46L128 29L141 43L154 27L168 44L182 28L193 43L208 31L220 41L231 29L245 44L260 32L276 39" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="artifact-trace">
+              <span>Movement</span>
+              <svg viewBox="0 0 280 72" aria-hidden="true">
+                <path d="M4 38H92L103 18L115 54L126 18L139 53L150 39H276" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="artifact-trace">
+              <span>Line noise</span>
+              <svg viewBox="0 0 280 72" aria-hidden="true">
+                <path d="M4 38C10 28 16 28 22 38S34 48 40 38S52 28 58 38S70 48 76 38S88 28 94 38S106 48 112 38S124 28 130 38S142 48 148 38S160 28 166 38S178 48 184 38S196 28 202 38S214 48 220 38S232 28 238 38S250 48 256 38S268 28 276 38" fill="none" stroke="#64748b" stroke-width="3" stroke-linecap="round" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sheet bands-sheet">
+        <div class="page-shell">
+          <div class="page-top">
+            <div class="section-eyebrow">06</div>
+            <h2>EEG Frequency Bands at a Glance</h2>
+            <p class="section-intro">
+              This is the quick-reference page: the main bands, their
+              approximate ranges, what they are commonly associated with, and
+              the one thing a beginner should remember when reviewing signals in
+              VisualBCI.
+            </p>
+          </div>
+          <div class="spectrum-card">
+            <div class="spectrum-scale">
+              <span>0.5</span>
+              <span>4</span>
+              <span>8</span>
+              <span>12</span>
+              <span>30</span>
+              <span>50+</span>
+            </div>
+            <div class="band-bars">
+              <div class="band-bar delta-bar"><span>Delta</span></div>
+              <div class="band-bar theta-bar"><span>Theta</span></div>
+              <div class="band-bar alpha-bar"><span>Alpha</span></div>
+              <div class="band-bar beta-bar"><span>Beta</span></div>
+              <div class="band-bar gamma-bar"><span>Gamma</span></div>
+            </div>
+          </div>
+          <div class="summary-table">
+            <div class="table-head">Band</div>
+            <div class="table-head">Frequency range</div>
+            <div class="table-head">Common associations</div>
+            <div class="table-head">What to remember</div>
+
+            <div>Delta</div>
+            <div>~0.5–4 Hz</div>
+            <div>Deep sleep, very slow activity</div>
+            <div>Strong delta is most familiar in sleep-related contexts.</div>
+
+            <div>Theta</div>
+            <div>~4–8 Hz</div>
+            <div>Drowsiness, memory processes, meditation</div>
+            <div>Theta often shows up in transitions, not just one single state.</div>
+
+            <div>Alpha</div>
+            <div>~8–12 Hz</div>
+            <div>Relaxed wakefulness, especially eyes closed</div>
+            <div>Alpha is one of the easiest beginner patterns to spot.</div>
+
+            <div>Beta</div>
+            <div>~12–30 Hz</div>
+            <div>Alertness, active engagement</div>
+            <div>Fast activity can be normal, but muscle artifact can mimic it.</div>
+
+            <div>Gamma</div>
+            <div>~30+ Hz</div>
+            <div>Complex processing, high-frequency content</div>
+            <div>Interpret carefully because scalp EEG gamma is harder to measure cleanly.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sheet">
+        <div class="page-shell">
+          <div class="page-top">
+            <div class="section-eyebrow">07</div>
+            <h2>Example EEG Signals</h2>
+            <p class="section-intro">
+              These are stylized educational examples, not clinical recordings.
+            </p>
+            <p class="section-intro">
+              The goal is to build visual intuition before you start analyzing
+              real recordings in VisualBCI.
+            </p>
+          </div>
+          <div class="example-grid">
+            <article class="example-card">
+              <div class="example-title">Relaxed alpha-like rhythm</div>
+              <svg viewBox="0 0 430 120" aria-hidden="true">
+                <path d="M10 60C23 25 36 25 49 60S75 95 88 60S114 25 127 60S153 95 166 60S192 25 205 60S231 95 244 60S270 25 283 60S309 95 322 60S348 25 361 60S387 95 400 60" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" />
+              </svg>
+              <p>Fairly regular rhythm with a clear repeating pattern and moderate amplitude.</p>
+            </article>
+            <article class="example-card">
+              <div class="example-title">Blink artifact</div>
+              <svg viewBox="0 0 430 120" aria-hidden="true">
+                <path d="M10 64H110C125 64 141 63 157 20C173 -12 196 112 214 64H420" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round" />
+              </svg>
+              <p>A single large slow deflection stands out from the surrounding trace.</p>
+            </article>
+            <article class="example-card">
+              <div class="example-title">Muscle contamination</div>
+              <svg viewBox="0 0 430 120" aria-hidden="true">
+                <path d="M10 62L23 45L35 74L48 42L61 76L74 46L87 68L100 41L112 77L126 46L139 70L152 42L164 74L177 48L190 65L203 43L216 78L230 46L244 72L257 41L270 75L284 47L297 67L310 43L323 76L336 45L350 70L365 42L380 78L394 47L410 62" fill="none" stroke="#64748b" stroke-width="3.2" stroke-linecap="round" />
+              </svg>
+              <p>Dense, jagged, high-frequency activity often suggests muscle rather than cortex.</p>
+            </article>
+            <article class="example-card">
+              <div class="example-title">Mixed resting EEG</div>
+              <svg viewBox="0 0 430 120" aria-hidden="true">
+                <path d="M10 64C24 58 34 41 47 57S72 92 87 61S112 31 126 47S153 97 168 69S192 38 207 56S232 91 246 63S271 35 285 58S311 89 324 63S349 41 363 56S390 81 410 61" fill="none" stroke="#111827" stroke-width="3.5" stroke-linecap="round" />
+              </svg>
+              <p>Real resting data usually blends multiple components rather than showing one perfect wave.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sheet">
+        <div class="page-shell">
+          <div class="page-top">
+            <div class="section-eyebrow">08</div>
+            <h2>How EEG Analysis Works</h2>
+          </div>
+          <div class="analysis-layout">
+            <div class="workflow-card">
+              <div class="card-label">Common workflow</div>
+              <div class="workflow-row">
+                <span>Record</span>
+                <span>Clean</span>
+                <span>Inspect</span>
+                <span>Analyze</span>
+                <span>Interpret</span>
+              </div>
+            </div>
+            <div class="analysis-grid">
+              <article class="analysis-card">
+                <h3><strong>Raw signal</strong></h3>
+                <p>EEG begins as voltage changing over time across multiple channels.</p>
+              </article>
+              <article class="analysis-card">
+                <h3><strong>Filter and clean</strong></h3>
+                <p>Signals are often filtered and cleaned to remove obvious contamination before interpretation.</p>
+              </article>
+              <article class="analysis-card">
+                <h3><strong>Segment</strong></h3>
+                <p>Data can be broken into shorter windows or event-related segments to isolate specific moments.</p>
+              </article>
+              <article class="analysis-card">
+                <h3><strong>Analyze frequency</strong></h3>
+                <p>Methods such as spectral analysis estimate power in bands like alpha or beta.</p>
+              </article>
+              <article class="analysis-card">
+                <h3><strong>Visualize</strong></h3>
+                <p>Plots, spectra, and topographies in VisualBCI make patterns easier to compare across channels and conditions.</p>
+              </article>
+              <article class="analysis-card">
+                <h3><strong>Interpret</strong></h3>
+                <p>Context matters: task, subject state, channel location, and artifact all shape the reading.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sheet closing-sheet">
+        <div class="page-shell closing-shell">
+          <div class="section-eyebrow">09</div>
+          <div class="closing-card">
+            <div class="closing-copy">
+              <div class="hero-kicker">VisualBCI</div>
+              <h2>Explore EEG Yourself</h2>
+              <p class="lead">
+                Reading about EEG is useful. Seeing your own signals is better.
+              </p>
+              <p>
+                This guide teaches the concepts. VisualBCI lets you explore
+                those concepts with real data.
+              </p>
+              <p>
+                Upload and inspect recordings in your browser through clean
+                VisualBCI visualizations designed to make brain activity easier
+                to interpret.
+              </p>
+              <a class="cta-link" href="https://visualbci.com">Explore VisualBCI</a>
+              <div class="cta-url">visualbci.com</div>
+            </div>
+            <div class="closing-visual">
+              <svg viewBox="0 0 440 300" aria-hidden="true">
+                <rect x="20" y="24" width="400" height="252" rx="28" fill="#f8fbff" stroke="#dbe6f1" />
+                <rect x="48" y="56" width="344" height="34" rx="10" fill="#e2e8f0" />
+                <rect x="48" y="108" width="104" height="128" rx="18" fill="#eff6ff" />
+                <rect x="168" y="108" width="224" height="128" rx="18" fill="#ffffff" stroke="#dbe6f1" />
+                <path d="M188 174C200 154 211 154 223 174S246 194 258 174S281 154 293 174S317 194 329 174S352 154 364 174" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" />
+                <path d="M64 144H136" stroke="#93c5fd" stroke-width="10" stroke-linecap="round" />
+                <path d="M64 170H124" stroke="#bfdbfe" stroke-width="10" stroke-linecap="round" />
+                <path d="M64 196H114" stroke="#dbeafe" stroke-width="10" stroke-linecap="round" />
+                <circle cx="70" cy="73" r="5" fill="#94a3b8" />
+                <circle cx="90" cy="73" r="5" fill="#94a3b8" />
+                <circle cx="110" cy="73" r="5" fill="#94a3b8" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="print-footer">
+      <span>The VisualBCI EEG Guide</span>
+      <span class="footer-spacer"></span>
+      <a class="footer-link" href="https://visualbci.com">VisualBCI</a>
+      <a class="footer-link footer-domain" href="https://visualbci.com">visualbci.com</a>
+      <span class="page-number">Page </span>
+    </footer>
+  </body>
+</html>

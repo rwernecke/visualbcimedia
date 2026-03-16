@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from config import BG, CYAN, GOLD, VIDEO_DIR, WHITE, ensure_directories
+from config import BG, CYAN, GOLD, GREEN, VIDEO_DIR, WHITE, ensure_directories
 from common import read_json, write_json
 from script_data import SEGMENTS, TOPIC
 
@@ -37,9 +37,10 @@ def main() -> None:
         "style": {
             "background": BG,
             "accent": CYAN,
+            "secondary": GREEN,
             "text": WHITE,
             "highlight": GOLD,
-            "direction": "Dark minimal Apple-style educational visuals.",
+            "direction": "Short-form viral brain visuals with glowing neurons, electric pulses, and cinematic motion.",
         },
         "scenes": [],
     }
@@ -54,7 +55,9 @@ def main() -> None:
                 "end": timing["end"],
                 "duration": timing["duration"],
                 "narration": segment["text"],
+                "hook": segment.get("hook", ""),
                 "visual_brief": segment["visual"],
+                "image_prompt": segment.get("image_prompt", ""),
                 "caption_cues": build_caption_cues(timing["word_timings"]),
             }
         )

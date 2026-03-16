@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from config import FINAL_DIR, REELS_DIR, REEL_ASPECT, REEL_CROP, REEL_RESOLUTION, ensure_directories
+from config import REELS_DIR, REEL_ASPECT, REEL_RESOLUTION, VIDEO_DIR, ensure_directories
 from common import read_json, run_command, write_json
 from script_data import REELS
 
@@ -12,13 +12,15 @@ def main() -> None:
     timing_map = {segment["id"]: segment for segment in timings["segments"]}
     reel_specs = []
     command_lines = ["#!/usr/bin/env bash", "set -euo pipefail", ""]
+    width, height = REEL_RESOLUTION
 
-    for reel in REELS:
+    for index, reel in enumerate(REELS, start=1):
         selected = [timing_map[segment_id] for segment_id in reel["segment_ids"]]
         start = min(item["start"] for item in selected)
         end = max(item["end"] for item in selected)
         duration = round(end - start, 2)
-        width, height = REEL_RESOLUTION
+        source_path = VIDEO_DIR / "segments" / f"{index:02}_{reel['segment_ids'][0]}.mp4"
+        target_path = REELS_DIR / f"{reel['id']}.mp4"
 
         reel_specs.append(
             {
@@ -29,33 +31,28 @@ def main() -> None:
                 "duration": duration,
                 "aspect_ratio": REEL_ASPECT,
                 "resolution": f"{width}x{height}",
-                "crop": REEL_CROP,
+                "source": str(source_path),
             }
         )
         command_lines.append(
             "ffmpeg "
-            f"-ss {start} -to {end} "
-            "-i visualbci_video_pipeline/final/what_is_eeg_full.mp4 "
-            f"-vf \"{REEL_CROP},scale={width}:{height}\" "
-            f"-c:v libx264 -c:a aac visualbci_video_pipeline/reels/{reel['id']}.mp4"
+            f"-i {source_path} "
+            f"-vf scale={width}:{height} "
+            f"-c:v libx264 -c:a aac {target_path}"
         )
         run_command(
             [
                 "ffmpeg",
                 "-y",
-                "-ss",
-                str(start),
-                "-to",
-                str(end),
                 "-i",
-                str(FINAL_DIR / "what_is_eeg_full.mp4"),
+                str(source_path),
                 "-vf",
-                f"{REEL_CROP},scale={width}:{height}",
+                f"scale={width}:{height}",
                 "-c:v",
                 "libx264",
                 "-c:a",
                 "aac",
-                str(REELS_DIR / f"{reel['id']}.mp4"),
+                str(target_path),
             ]
         )
 

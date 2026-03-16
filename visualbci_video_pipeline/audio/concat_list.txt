@@ -1,4 +1,3 @@
-file '/Users/rafael/visualbcimedia/visualbci_video_pipeline/audio/01_hook.wav'
-file '/Users/rafael/visualbcimedia/visualbci_video_pipeline/audio/02_measurements.wav'
-file '/Users/rafael/visualbcimedia/visualbci_video_pipeline/audio/03_brain_waves.wav'
-file '/Users/rafael/visualbcimedia/visualbci_video_pipeline/audio/04_importance.wav'
+file '/Users/rafael/visualbcimedia/visualbci_video_pipeline/audio/01_beginner_mistake.wav'
+file '/Users/rafael/visualbcimedia/visualbci_video_pipeline/audio/02_brain_electricity.wav'
+file '/Users/rafael/visualbcimedia/visualbci_video_pipeline/audio/03_no_phd.wav'

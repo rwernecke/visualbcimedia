@@ -1,1182 +1,812 @@
 {
-  "topic": "What is EEG?",
+  "topic": "Viral Brain Reels",
   "style": {
     "background": "#0f0f1a",
     "accent": "#00d4ff",
+    "secondary": "#50fa7b",
     "text": "#ffffff",
     "highlight": "#ffd700",
-    "direction": "Dark minimal Apple-style educational visuals."
+    "direction": "Short-form viral brain visuals with glowing neurons, electric pulses, and cinematic motion."
   },
   "scenes": [
     {
-      "id": "hook",
-      "title": "Hook",
+      "id": "beginner_mistake",
+      "title": "Your Brain Can Fake a Signal",
       "start": 0.0,
-      "end": 10.4,
-      "duration": 10.4,
-      "narration": "What if we could watch the brain think in real time? Electroencephalography, or EEG, gives us a window into the electrical rhythms of the brain.",
-      "visual_brief": "Open with a dark background, glowing head outline, and animated waveform pulses.",
+      "end": 12.25,
+      "duration": 12.25,
+      "narration": "Your brain can fake a signal that looks intense, dramatic, and completely real. Sometimes the most exciting brain wave on screen is just noise wearing a costume.",
+      "visual_brief": "Start with a cinematic sci-fi brain in a storm of neon signal lines, then strip away the chaos until only one clean golden pulse remains.",
       "caption_cues": [
         {
           "start": 0.0,
-          "end": 0.416,
+          "end": 0.454,
           "words": [
-            "What",
-            "if",
-            "we"
+            "Your",
+            "brain",
+            "can"
           ],
           "highlight_index": 0
         },
         {
-          "start": 0.416,
-          "end": 0.832,
+          "start": 0.454,
+          "end": 0.908,
           "words": [
-            "What",
-            "if",
-            "we"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 0.832,
-          "end": 1.248,
-          "words": [
-            "if",
-            "we",
-            "could"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 1.248,
-          "end": 1.664,
-          "words": [
-            "we",
-            "could",
-            "watch"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 1.664,
-          "end": 2.08,
-          "words": [
-            "could",
-            "watch",
-            "the"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 2.08,
-          "end": 2.496,
-          "words": [
-            "watch",
-            "the",
-            "brain"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 2.496,
-          "end": 2.912,
-          "words": [
-            "the",
+            "Your",
             "brain",
-            "think"
+            "can"
           ],
           "highlight_index": 1
         },
         {
-          "start": 2.912,
-          "end": 3.328,
+          "start": 0.908,
+          "end": 1.362,
           "words": [
             "brain",
-            "think",
-            "in"
+            "can",
+            "fake"
           ],
           "highlight_index": 1
         },
         {
-          "start": 3.328,
-          "end": 3.744,
+          "start": 1.362,
+          "end": 1.816,
           "words": [
-            "think",
-            "in",
-            "real"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 3.744,
-          "end": 4.16,
-          "words": [
-            "in",
-            "real",
-            "time?"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 4.16,
-          "end": 4.576,
-          "words": [
-            "real",
-            "time?",
-            "Electroencephalography,"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 4.576,
-          "end": 4.992,
-          "words": [
-            "time?",
-            "Electroencephalography,",
-            "or"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 4.992,
-          "end": 5.408,
-          "words": [
-            "Electroencephalography,",
-            "or",
-            "EEG,"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 5.408,
-          "end": 5.824,
-          "words": [
-            "or",
-            "EEG,",
-            "gives"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 5.824,
-          "end": 6.24,
-          "words": [
-            "EEG,",
-            "gives",
-            "us"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 6.24,
-          "end": 6.656,
-          "words": [
-            "gives",
-            "us",
+            "can",
+            "fake",
             "a"
           ],
           "highlight_index": 1
         },
         {
-          "start": 6.656,
-          "end": 7.072,
+          "start": 1.816,
+          "end": 2.27,
           "words": [
-            "us",
+            "fake",
             "a",
-            "window"
+            "signal"
           ],
           "highlight_index": 1
         },
         {
-          "start": 7.072,
-          "end": 7.488,
+          "start": 2.27,
+          "end": 2.724,
           "words": [
             "a",
-            "window",
-            "into"
+            "signal",
+            "that"
           ],
           "highlight_index": 1
         },
         {
-          "start": 7.488,
-          "end": 7.904,
+          "start": 2.724,
+          "end": 3.178,
           "words": [
-            "window",
-            "into",
+            "signal",
+            "that",
+            "looks"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 3.178,
+          "end": 3.632,
+          "words": [
+            "that",
+            "looks",
+            "intense,"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 3.632,
+          "end": 4.086,
+          "words": [
+            "looks",
+            "intense,",
+            "dramatic,"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 4.086,
+          "end": 4.54,
+          "words": [
+            "intense,",
+            "dramatic,",
+            "and"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 4.54,
+          "end": 4.994,
+          "words": [
+            "dramatic,",
+            "and",
+            "completely"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 4.994,
+          "end": 5.448,
+          "words": [
+            "and",
+            "completely",
+            "real."
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 5.448,
+          "end": 5.902,
+          "words": [
+            "completely",
+            "real.",
+            "Sometimes"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 5.902,
+          "end": 6.356,
+          "words": [
+            "real.",
+            "Sometimes",
             "the"
           ],
           "highlight_index": 1
         },
         {
-          "start": 7.904,
-          "end": 8.32,
+          "start": 6.356,
+          "end": 6.81,
           "words": [
-            "into",
+            "Sometimes",
             "the",
-            "electrical"
+            "most"
           ],
           "highlight_index": 1
         },
         {
-          "start": 8.32,
-          "end": 8.736,
-          "words": [
-            "the",
-            "electrical",
-            "rhythms"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 8.736,
-          "end": 9.152,
-          "words": [
-            "electrical",
-            "rhythms",
-            "of"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 9.152,
-          "end": 9.568,
-          "words": [
-            "rhythms",
-            "of",
-            "the"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 9.568,
-          "end": 9.984,
-          "words": [
-            "of",
-            "the",
-            "brain."
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 9.984,
-          "end": 10.4,
-          "words": [
-            "of",
-            "the",
-            "brain."
-          ],
-          "highlight_index": 2
-        }
-      ]
-    },
-    {
-      "id": "measurements",
-      "title": "What EEG Measures",
-      "start": 10.4,
-      "end": 30.4,
-      "duration": 20,
-      "narration": "EEG measures tiny voltage changes at the scalp caused by large groups of neurons firing together. Electrodes do not read thoughts directly. They detect synchronized electrical activity.",
-      "visual_brief": "Show scalp electrodes, cortex activity, and signal lines traveling to a monitor.",
-      "caption_cues": [
-        {
-          "start": 10.4,
-          "end": 11.141,
-          "words": [
-            "EEG",
-            "measures",
-            "tiny"
-          ],
-          "highlight_index": 0
-        },
-        {
-          "start": 11.141,
-          "end": 11.882,
-          "words": [
-            "EEG",
-            "measures",
-            "tiny"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 11.882,
-          "end": 12.623,
-          "words": [
-            "measures",
-            "tiny",
-            "voltage"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 12.623,
-          "end": 13.364,
-          "words": [
-            "tiny",
-            "voltage",
-            "changes"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 13.364,
-          "end": 14.105,
-          "words": [
-            "voltage",
-            "changes",
-            "at"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 14.105,
-          "end": 14.846,
-          "words": [
-            "changes",
-            "at",
-            "the"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 14.846,
-          "end": 15.587,
-          "words": [
-            "at",
-            "the",
-            "scalp"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 15.587,
-          "end": 16.328,
+          "start": 6.81,
+          "end": 7.264,
           "words": [
             "the",
-            "scalp",
-            "caused"
+            "most",
+            "exciting"
           ],
           "highlight_index": 1
         },
         {
-          "start": 16.328,
-          "end": 17.069,
+          "start": 7.264,
+          "end": 7.718,
           "words": [
-            "scalp",
-            "caused",
-            "by"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 17.069,
-          "end": 17.81,
-          "words": [
-            "caused",
-            "by",
-            "large"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 17.81,
-          "end": 18.551,
-          "words": [
-            "by",
-            "large",
-            "groups"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 18.551,
-          "end": 19.292,
-          "words": [
-            "large",
-            "groups",
-            "of"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 19.292,
-          "end": 20.033,
-          "words": [
-            "groups",
-            "of",
-            "neurons"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 20.033,
-          "end": 20.774,
-          "words": [
-            "of",
-            "neurons",
-            "firing"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 20.774,
-          "end": 21.515,
-          "words": [
-            "neurons",
-            "firing",
-            "together."
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 21.515,
-          "end": 22.256,
-          "words": [
-            "firing",
-            "together.",
-            "Electrodes"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 22.256,
-          "end": 22.997,
-          "words": [
-            "together.",
-            "Electrodes",
-            "do"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 22.997,
-          "end": 23.738,
-          "words": [
-            "Electrodes",
-            "do",
-            "not"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 23.738,
-          "end": 24.479,
-          "words": [
-            "do",
-            "not",
-            "read"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 24.479,
-          "end": 25.22,
-          "words": [
-            "not",
-            "read",
-            "thoughts"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 25.22,
-          "end": 25.961,
-          "words": [
-            "read",
-            "thoughts",
-            "directly."
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 25.961,
-          "end": 26.702,
-          "words": [
-            "thoughts",
-            "directly.",
-            "They"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 26.702,
-          "end": 27.443,
-          "words": [
-            "directly.",
-            "They",
-            "detect"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 27.443,
-          "end": 28.184,
-          "words": [
-            "They",
-            "detect",
-            "synchronized"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 28.184,
-          "end": 28.925,
-          "words": [
-            "detect",
-            "synchronized",
-            "electrical"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 28.925,
-          "end": 29.666,
-          "words": [
-            "synchronized",
-            "electrical",
-            "activity."
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 29.666,
-          "end": 30.407,
-          "words": [
-            "synchronized",
-            "electrical",
-            "activity."
-          ],
-          "highlight_index": 2
-        }
-      ]
-    },
-    {
-      "id": "brain_waves",
-      "title": "Brain Waves Overview",
-      "start": 30.4,
-      "end": 50.4,
-      "duration": 20,
-      "narration": "These signals are often grouped into brain wave bands like delta, theta, alpha, beta, and gamma. Each band is linked with different states such as sleep, relaxation, focus, and active processing.",
-      "visual_brief": "Introduce five glowing wave bands with labels and frequency ranges.",
-      "caption_cues": [
-        {
-          "start": 30.4,
-          "end": 31.045,
-          "words": [
-            "These",
-            "signals",
-            "are"
-          ],
-          "highlight_index": 0
-        },
-        {
-          "start": 31.045,
-          "end": 31.69,
-          "words": [
-            "These",
-            "signals",
-            "are"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 31.69,
-          "end": 32.335,
-          "words": [
-            "signals",
-            "are",
-            "often"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 32.335,
-          "end": 32.98,
-          "words": [
-            "are",
-            "often",
-            "grouped"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 32.98,
-          "end": 33.625,
-          "words": [
-            "often",
-            "grouped",
-            "into"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 33.625,
-          "end": 34.27,
-          "words": [
-            "grouped",
-            "into",
+            "most",
+            "exciting",
             "brain"
           ],
           "highlight_index": 1
         },
         {
-          "start": 34.27,
-          "end": 34.915,
+          "start": 7.718,
+          "end": 8.172,
           "words": [
-            "into",
+            "exciting",
             "brain",
             "wave"
           ],
           "highlight_index": 1
         },
         {
-          "start": 34.915,
-          "end": 35.56,
+          "start": 8.172,
+          "end": 8.626,
           "words": [
             "brain",
             "wave",
-            "bands"
+            "on"
           ],
           "highlight_index": 1
         },
         {
-          "start": 35.56,
-          "end": 36.205,
+          "start": 8.626,
+          "end": 9.08,
           "words": [
             "wave",
-            "bands",
-            "like"
+            "on",
+            "screen"
           ],
           "highlight_index": 1
         },
         {
-          "start": 36.205,
-          "end": 36.85,
+          "start": 9.08,
+          "end": 9.534,
           "words": [
-            "bands",
-            "like",
-            "delta,"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 36.85,
-          "end": 37.495,
-          "words": [
-            "like",
-            "delta,",
-            "theta,"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 37.495,
-          "end": 38.14,
-          "words": [
-            "delta,",
-            "theta,",
-            "alpha,"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 38.14,
-          "end": 38.785,
-          "words": [
-            "theta,",
-            "alpha,",
-            "beta,"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 38.785,
-          "end": 39.43,
-          "words": [
-            "alpha,",
-            "beta,",
-            "and"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 39.43,
-          "end": 40.075,
-          "words": [
-            "beta,",
-            "and",
-            "gamma."
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 40.075,
-          "end": 40.72,
-          "words": [
-            "and",
-            "gamma.",
-            "Each"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 40.72,
-          "end": 41.365,
-          "words": [
-            "gamma.",
-            "Each",
-            "band"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 41.365,
-          "end": 42.01,
-          "words": [
-            "Each",
-            "band",
+            "on",
+            "screen",
             "is"
           ],
           "highlight_index": 1
         },
         {
-          "start": 42.01,
-          "end": 42.655,
+          "start": 9.534,
+          "end": 9.988,
           "words": [
-            "band",
+            "screen",
             "is",
-            "linked"
+            "just"
           ],
           "highlight_index": 1
         },
         {
-          "start": 42.655,
-          "end": 43.3,
+          "start": 9.988,
+          "end": 10.442,
           "words": [
             "is",
-            "linked",
-            "with"
+            "just",
+            "noise"
           ],
           "highlight_index": 1
         },
         {
-          "start": 43.3,
-          "end": 43.945,
+          "start": 10.442,
+          "end": 10.896,
           "words": [
-            "linked",
-            "with",
-            "different"
+            "just",
+            "noise",
+            "wearing"
           ],
           "highlight_index": 1
         },
         {
-          "start": 43.945,
-          "end": 44.59,
+          "start": 10.896,
+          "end": 11.35,
           "words": [
-            "with",
-            "different",
-            "states"
+            "noise",
+            "wearing",
+            "a"
           ],
           "highlight_index": 1
         },
         {
-          "start": 44.59,
-          "end": 45.235,
+          "start": 11.35,
+          "end": 11.804,
           "words": [
-            "different",
-            "states",
-            "such"
+            "wearing",
+            "a",
+            "costume."
           ],
           "highlight_index": 1
         },
         {
-          "start": 45.235,
-          "end": 45.88,
+          "start": 11.804,
+          "end": 12.258,
           "words": [
-            "states",
-            "such",
-            "as"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 45.88,
-          "end": 46.525,
-          "words": [
-            "such",
-            "as",
-            "sleep,"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 46.525,
-          "end": 47.17,
-          "words": [
-            "as",
-            "sleep,",
-            "relaxation,"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 47.17,
-          "end": 47.815,
-          "words": [
-            "sleep,",
-            "relaxation,",
-            "focus,"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 47.815,
-          "end": 48.46,
-          "words": [
-            "relaxation,",
-            "focus,",
-            "and"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 48.46,
-          "end": 49.105,
-          "words": [
-            "focus,",
-            "and",
-            "active"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 49.105,
-          "end": 49.75,
-          "words": [
-            "and",
-            "active",
-            "processing."
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 49.75,
-          "end": 50.395,
-          "words": [
-            "and",
-            "active",
-            "processing."
+            "wearing",
+            "a",
+            "costume."
           ],
           "highlight_index": 2
         }
       ]
     },
     {
-      "id": "importance",
-      "title": "Why EEG Matters",
-      "start": 50.4,
-      "end": 70.4,
-      "duration": 20,
-      "narration": "EEG matters because it is noninvasive, fast, and useful in medicine, research, and brain-computer interfaces. It helps us study attention, detect seizures, and build systems that respond to brain activity.",
-      "visual_brief": "End with split panels for clinic, research lab, and BCI interface.",
+      "id": "brain_electricity",
+      "title": "Your Brain Produces Electricity",
+      "start": 12.25,
+      "end": 21.47,
+      "duration": 9.22,
+      "narration": "Your thoughts run on electricity. Tiny flashes race across your brain every second, like a living city lighting up from the inside.",
+      "visual_brief": "Show a luminous sci-fi brain igniting from the inside with branching neurons, glowing synapses, and waves racing through a dark futuristic void.",
       "caption_cues": [
         {
-          "start": 50.4,
-          "end": 51.067,
+          "start": 12.25,
+          "end": 12.669,
           "words": [
-            "EEG",
-            "matters",
-            "because"
+            "Your",
+            "thoughts",
+            "run"
           ],
           "highlight_index": 0
         },
         {
-          "start": 51.067,
-          "end": 51.734,
+          "start": 12.669,
+          "end": 13.088,
           "words": [
-            "EEG",
-            "matters",
-            "because"
+            "Your",
+            "thoughts",
+            "run"
           ],
           "highlight_index": 1
         },
         {
-          "start": 51.734,
-          "end": 52.401,
+          "start": 13.088,
+          "end": 13.507,
           "words": [
-            "matters",
-            "because",
-            "it"
+            "thoughts",
+            "run",
+            "on"
           ],
           "highlight_index": 1
         },
         {
-          "start": 52.401,
-          "end": 53.068,
+          "start": 13.507,
+          "end": 13.926,
           "words": [
-            "because",
-            "it",
-            "is"
+            "run",
+            "on",
+            "electricity."
           ],
           "highlight_index": 1
         },
         {
-          "start": 53.068,
-          "end": 53.735,
+          "start": 13.926,
+          "end": 14.345,
           "words": [
-            "it",
-            "is",
-            "noninvasive,"
+            "on",
+            "electricity.",
+            "Tiny"
           ],
           "highlight_index": 1
         },
         {
-          "start": 53.735,
-          "end": 54.402,
+          "start": 14.345,
+          "end": 14.764,
           "words": [
-            "is",
-            "noninvasive,",
-            "fast,"
+            "electricity.",
+            "Tiny",
+            "flashes"
           ],
           "highlight_index": 1
         },
         {
-          "start": 54.402,
-          "end": 55.069,
+          "start": 14.764,
+          "end": 15.183,
           "words": [
-            "noninvasive,",
-            "fast,",
-            "and"
+            "Tiny",
+            "flashes",
+            "race"
           ],
           "highlight_index": 1
         },
         {
-          "start": 55.069,
-          "end": 55.736,
+          "start": 15.183,
+          "end": 15.602,
           "words": [
-            "fast,",
-            "and",
-            "useful"
+            "flashes",
+            "race",
+            "across"
           ],
           "highlight_index": 1
         },
         {
-          "start": 55.736,
-          "end": 56.403,
+          "start": 15.602,
+          "end": 16.021,
           "words": [
-            "and",
-            "useful",
-            "in"
+            "race",
+            "across",
+            "your"
           ],
           "highlight_index": 1
         },
         {
-          "start": 56.403,
-          "end": 57.07,
+          "start": 16.021,
+          "end": 16.44,
           "words": [
-            "useful",
-            "in",
-            "medicine,"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 57.07,
-          "end": 57.737,
-          "words": [
-            "in",
-            "medicine,",
-            "research,"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 57.737,
-          "end": 58.404,
-          "words": [
-            "medicine,",
-            "research,",
-            "and"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 58.404,
-          "end": 59.071,
-          "words": [
-            "research,",
-            "and",
-            "brain-computer"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 59.071,
-          "end": 59.738,
-          "words": [
-            "and",
-            "brain-computer",
-            "interfaces."
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 59.738,
-          "end": 60.405,
-          "words": [
-            "brain-computer",
-            "interfaces.",
-            "It"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 60.405,
-          "end": 61.072,
-          "words": [
-            "interfaces.",
-            "It",
-            "helps"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 61.072,
-          "end": 61.739,
-          "words": [
-            "It",
-            "helps",
-            "us"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 61.739,
-          "end": 62.406,
-          "words": [
-            "helps",
-            "us",
-            "study"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 62.406,
-          "end": 63.073,
-          "words": [
-            "us",
-            "study",
-            "attention,"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 63.073,
-          "end": 63.74,
-          "words": [
-            "study",
-            "attention,",
-            "detect"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 63.74,
-          "end": 64.407,
-          "words": [
-            "attention,",
-            "detect",
-            "seizures,"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 64.407,
-          "end": 65.074,
-          "words": [
-            "detect",
-            "seizures,",
-            "and"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 65.074,
-          "end": 65.741,
-          "words": [
-            "seizures,",
-            "and",
-            "build"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 65.741,
-          "end": 66.408,
-          "words": [
-            "and",
-            "build",
-            "systems"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 66.408,
-          "end": 67.075,
-          "words": [
-            "build",
-            "systems",
-            "that"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 67.075,
-          "end": 67.742,
-          "words": [
-            "systems",
-            "that",
-            "respond"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 67.742,
-          "end": 68.409,
-          "words": [
-            "that",
-            "respond",
-            "to"
-          ],
-          "highlight_index": 1
-        },
-        {
-          "start": 68.409,
-          "end": 69.076,
-          "words": [
-            "respond",
-            "to",
+            "across",
+            "your",
             "brain"
           ],
           "highlight_index": 1
         },
         {
-          "start": 69.076,
-          "end": 69.743,
+          "start": 16.44,
+          "end": 16.859,
           "words": [
-            "to",
+            "your",
             "brain",
-            "activity."
+            "every"
           ],
           "highlight_index": 1
         },
         {
-          "start": 69.743,
-          "end": 70.41,
+          "start": 16.859,
+          "end": 17.278,
+          "words": [
+            "brain",
+            "every",
+            "second,"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 17.278,
+          "end": 17.697,
+          "words": [
+            "every",
+            "second,",
+            "like"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 17.697,
+          "end": 18.116,
+          "words": [
+            "second,",
+            "like",
+            "a"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 18.116,
+          "end": 18.535,
+          "words": [
+            "like",
+            "a",
+            "living"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 18.535,
+          "end": 18.954,
+          "words": [
+            "a",
+            "living",
+            "city"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 18.954,
+          "end": 19.373,
+          "words": [
+            "living",
+            "city",
+            "lighting"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 19.373,
+          "end": 19.792,
+          "words": [
+            "city",
+            "lighting",
+            "up"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 19.792,
+          "end": 20.211,
+          "words": [
+            "lighting",
+            "up",
+            "from"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 20.211,
+          "end": 20.63,
+          "words": [
+            "up",
+            "from",
+            "the"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 20.63,
+          "end": 21.049,
+          "words": [
+            "from",
+            "the",
+            "inside."
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 21.049,
+          "end": 21.468,
+          "words": [
+            "from",
+            "the",
+            "inside."
+          ],
+          "highlight_index": 2
+        }
+      ]
+    },
+    {
+      "id": "no_phd",
+      "title": "You Do Not Need a PhD",
+      "start": 21.47,
+      "end": 32.36,
+      "duration": 10.89,
+      "narration": "Reading brain patterns is easier than people think. You do not need a genius IQ, you just need to notice what changes, what repeats, and what lights up.",
+      "visual_brief": "Show an elegant sci-fi brain interface where glowing regions activate and patterns snap together like a futuristic puzzle.",
+      "caption_cues": [
+        {
+          "start": 21.47,
+          "end": 21.859,
+          "words": [
+            "Reading",
+            "brain",
+            "patterns"
+          ],
+          "highlight_index": 0
+        },
+        {
+          "start": 21.859,
+          "end": 22.248,
+          "words": [
+            "Reading",
+            "brain",
+            "patterns"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 22.248,
+          "end": 22.637,
+          "words": [
+            "brain",
+            "patterns",
+            "is"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 22.637,
+          "end": 23.026,
+          "words": [
+            "patterns",
+            "is",
+            "easier"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 23.026,
+          "end": 23.415,
+          "words": [
+            "is",
+            "easier",
+            "than"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 23.415,
+          "end": 23.804,
+          "words": [
+            "easier",
+            "than",
+            "people"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 23.804,
+          "end": 24.193,
+          "words": [
+            "than",
+            "people",
+            "think."
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 24.193,
+          "end": 24.582,
+          "words": [
+            "people",
+            "think.",
+            "You"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 24.582,
+          "end": 24.971,
+          "words": [
+            "think.",
+            "You",
+            "do"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 24.971,
+          "end": 25.36,
+          "words": [
+            "You",
+            "do",
+            "not"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 25.36,
+          "end": 25.749,
+          "words": [
+            "do",
+            "not",
+            "need"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 25.749,
+          "end": 26.138,
+          "words": [
+            "not",
+            "need",
+            "a"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 26.138,
+          "end": 26.527,
+          "words": [
+            "need",
+            "a",
+            "genius"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 26.527,
+          "end": 26.916,
+          "words": [
+            "a",
+            "genius",
+            "IQ,"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 26.916,
+          "end": 27.305,
+          "words": [
+            "genius",
+            "IQ,",
+            "you"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 27.305,
+          "end": 27.694,
+          "words": [
+            "IQ,",
+            "you",
+            "just"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 27.694,
+          "end": 28.083,
+          "words": [
+            "you",
+            "just",
+            "need"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 28.083,
+          "end": 28.472,
+          "words": [
+            "just",
+            "need",
+            "to"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 28.472,
+          "end": 28.861,
+          "words": [
+            "need",
+            "to",
+            "notice"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 28.861,
+          "end": 29.25,
           "words": [
             "to",
-            "brain",
-            "activity."
+            "notice",
+            "what"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 29.25,
+          "end": 29.639,
+          "words": [
+            "notice",
+            "what",
+            "changes,"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 29.639,
+          "end": 30.028,
+          "words": [
+            "what",
+            "changes,",
+            "what"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 30.028,
+          "end": 30.417,
+          "words": [
+            "changes,",
+            "what",
+            "repeats,"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 30.417,
+          "end": 30.806,
+          "words": [
+            "what",
+            "repeats,",
+            "and"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 30.806,
+          "end": 31.195,
+          "words": [
+            "repeats,",
+            "and",
+            "what"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 31.195,
+          "end": 31.584,
+          "words": [
+            "and",
+            "what",
+            "lights"
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 31.584,
+          "end": 31.973,
+          "words": [
+            "what",
+            "lights",
+            "up."
+          ],
+          "highlight_index": 1
+        },
+        {
+          "start": 31.973,
+          "end": 32.362,
+          "words": [
+            "what",
+            "lights",
+            "up."
           ],
           "highlight_index": 2
         }

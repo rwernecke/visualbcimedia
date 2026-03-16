@@ -1,10 +1,14 @@
 .DS_Store
+.venv*/
 __pycache__/
 visualbci_video_pipeline/__pycache__/
 visualbci_video_pipeline/audio/*.aiff
 visualbci_video_pipeline/audio/*.wav
 visualbci_video_pipeline/video/assets/
+visualbci_video_pipeline/video/generated/
+visualbci_video_pipeline/video/manim_media/
 visualbci_video_pipeline/video/segments/
 visualbci_video_pipeline/video/.swift-cache/
 visualbci_video_pipeline/final/*.mp4
 visualbci_video_pipeline/reels/*.mp4
+visualbci_video_pipeline/reels/reel_*_frame.png

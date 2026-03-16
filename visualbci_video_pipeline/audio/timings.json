@@ -1,609 +1,419 @@
 {
-  "topic": "What is EEG?",
-  "total_duration": 50.36,
+  "topic": "Viral Brain Reels",
+  "total_duration": 32.36,
   "segments": [
     {
-      "id": "hook",
-      "title": "Hook",
+      "id": "beginner_mistake",
+      "title": "Your Brain Can Fake a Signal",
       "start": 0.0,
-      "end": 9.39,
-      "duration": 9.39,
-      "text": "What if we could watch the brain think in real time? Electroencephalography, or EEG, gives us a window into the electrical rhythms of the brain.",
+      "end": 12.25,
+      "duration": 12.25,
+      "text": "Your brain can fake a signal that looks intense, dramatic, and completely real. Sometimes the most exciting brain wave on screen is just noise wearing a costume.",
       "word_timings": [
         {
-          "word": "What",
+          "word": "Your",
           "start": 0.0,
-          "end": 0.376
-        },
-        {
-          "word": "if",
-          "start": 0.376,
-          "end": 0.752
-        },
-        {
-          "word": "we",
-          "start": 0.752,
-          "end": 1.128
-        },
-        {
-          "word": "could",
-          "start": 1.128,
-          "end": 1.504
-        },
-        {
-          "word": "watch",
-          "start": 1.504,
-          "end": 1.88
-        },
-        {
-          "word": "the",
-          "start": 1.88,
-          "end": 2.256
+          "end": 0.454
         },
         {
           "word": "brain",
-          "start": 2.256,
-          "end": 2.632
+          "start": 0.454,
+          "end": 0.908
         },
         {
-          "word": "think",
-          "start": 2.632,
-          "end": 3.008
+          "word": "can",
+          "start": 0.908,
+          "end": 1.362
         },
         {
-          "word": "in",
-          "start": 3.008,
-          "end": 3.384
-        },
-        {
-          "word": "real",
-          "start": 3.384,
-          "end": 3.76
-        },
-        {
-          "word": "time?",
-          "start": 3.76,
-          "end": 4.136
-        },
-        {
-          "word": "Electroencephalography,",
-          "start": 4.136,
-          "end": 4.512
-        },
-        {
-          "word": "or",
-          "start": 4.512,
-          "end": 4.888
-        },
-        {
-          "word": "EEG,",
-          "start": 4.888,
-          "end": 5.264
-        },
-        {
-          "word": "gives",
-          "start": 5.264,
-          "end": 5.64
-        },
-        {
-          "word": "us",
-          "start": 5.64,
-          "end": 6.016
+          "word": "fake",
+          "start": 1.362,
+          "end": 1.816
         },
         {
           "word": "a",
-          "start": 6.016,
-          "end": 6.392
+          "start": 1.816,
+          "end": 2.27
         },
         {
-          "word": "window",
-          "start": 6.392,
-          "end": 6.768
-        },
-        {
-          "word": "into",
-          "start": 6.768,
-          "end": 7.144
-        },
-        {
-          "word": "the",
-          "start": 7.144,
-          "end": 7.52
-        },
-        {
-          "word": "electrical",
-          "start": 7.52,
-          "end": 7.896
-        },
-        {
-          "word": "rhythms",
-          "start": 7.896,
-          "end": 8.272
-        },
-        {
-          "word": "of",
-          "start": 8.272,
-          "end": 8.648
-        },
-        {
-          "word": "the",
-          "start": 8.648,
-          "end": 9.024
-        },
-        {
-          "word": "brain.",
-          "start": 9.024,
-          "end": 9.4
-        }
-      ]
-    },
-    {
-      "id": "measurements",
-      "title": "What EEG Measures",
-      "start": 9.39,
-      "end": 21.9,
-      "duration": 12.51,
-      "text": "EEG measures tiny voltage changes at the scalp caused by large groups of neurons firing together. Electrodes do not read thoughts directly. They detect synchronized electrical activity.",
-      "word_timings": [
-        {
-          "word": "EEG",
-          "start": 9.39,
-          "end": 9.853
-        },
-        {
-          "word": "measures",
-          "start": 9.853,
-          "end": 10.316
-        },
-        {
-          "word": "tiny",
-          "start": 10.316,
-          "end": 10.779
-        },
-        {
-          "word": "voltage",
-          "start": 10.779,
-          "end": 11.242
-        },
-        {
-          "word": "changes",
-          "start": 11.242,
-          "end": 11.705
-        },
-        {
-          "word": "at",
-          "start": 11.705,
-          "end": 12.168
-        },
-        {
-          "word": "the",
-          "start": 12.168,
-          "end": 12.631
-        },
-        {
-          "word": "scalp",
-          "start": 12.631,
-          "end": 13.094
-        },
-        {
-          "word": "caused",
-          "start": 13.094,
-          "end": 13.557
-        },
-        {
-          "word": "by",
-          "start": 13.557,
-          "end": 14.02
-        },
-        {
-          "word": "large",
-          "start": 14.02,
-          "end": 14.483
-        },
-        {
-          "word": "groups",
-          "start": 14.483,
-          "end": 14.946
-        },
-        {
-          "word": "of",
-          "start": 14.946,
-          "end": 15.409
-        },
-        {
-          "word": "neurons",
-          "start": 15.409,
-          "end": 15.872
-        },
-        {
-          "word": "firing",
-          "start": 15.872,
-          "end": 16.335
-        },
-        {
-          "word": "together.",
-          "start": 16.335,
-          "end": 16.798
-        },
-        {
-          "word": "Electrodes",
-          "start": 16.798,
-          "end": 17.261
-        },
-        {
-          "word": "do",
-          "start": 17.261,
-          "end": 17.724
-        },
-        {
-          "word": "not",
-          "start": 17.724,
-          "end": 18.187
-        },
-        {
-          "word": "read",
-          "start": 18.187,
-          "end": 18.65
-        },
-        {
-          "word": "thoughts",
-          "start": 18.65,
-          "end": 19.113
-        },
-        {
-          "word": "directly.",
-          "start": 19.113,
-          "end": 19.576
-        },
-        {
-          "word": "They",
-          "start": 19.576,
-          "end": 20.039
-        },
-        {
-          "word": "detect",
-          "start": 20.039,
-          "end": 20.502
-        },
-        {
-          "word": "synchronized",
-          "start": 20.502,
-          "end": 20.965
-        },
-        {
-          "word": "electrical",
-          "start": 20.965,
-          "end": 21.428
-        },
-        {
-          "word": "activity.",
-          "start": 21.428,
-          "end": 21.891
-        }
-      ]
-    },
-    {
-      "id": "brain_waves",
-      "title": "Brain Waves Overview",
-      "start": 21.9,
-      "end": 35.64,
-      "duration": 13.74,
-      "text": "These signals are often grouped into brain wave bands like delta, theta, alpha, beta, and gamma. Each band is linked with different states such as sleep, relaxation, focus, and active processing.",
-      "word_timings": [
-        {
-          "word": "These",
-          "start": 21.9,
-          "end": 22.343
-        },
-        {
-          "word": "signals",
-          "start": 22.343,
-          "end": 22.786
-        },
-        {
-          "word": "are",
-          "start": 22.786,
-          "end": 23.229
-        },
-        {
-          "word": "often",
-          "start": 23.229,
-          "end": 23.672
-        },
-        {
-          "word": "grouped",
-          "start": 23.672,
-          "end": 24.115
-        },
-        {
-          "word": "into",
-          "start": 24.115,
-          "end": 24.558
-        },
-        {
-          "word": "brain",
-          "start": 24.558,
-          "end": 25.001
-        },
-        {
-          "word": "wave",
-          "start": 25.001,
-          "end": 25.444
-        },
-        {
-          "word": "bands",
-          "start": 25.444,
-          "end": 25.887
-        },
-        {
-          "word": "like",
-          "start": 25.887,
-          "end": 26.33
-        },
-        {
-          "word": "delta,",
-          "start": 26.33,
-          "end": 26.773
-        },
-        {
-          "word": "theta,",
-          "start": 26.773,
-          "end": 27.216
-        },
-        {
-          "word": "alpha,",
-          "start": 27.216,
-          "end": 27.659
-        },
-        {
-          "word": "beta,",
-          "start": 27.659,
-          "end": 28.102
-        },
-        {
-          "word": "and",
-          "start": 28.102,
-          "end": 28.545
-        },
-        {
-          "word": "gamma.",
-          "start": 28.545,
-          "end": 28.988
-        },
-        {
-          "word": "Each",
-          "start": 28.988,
-          "end": 29.431
-        },
-        {
-          "word": "band",
-          "start": 29.431,
-          "end": 29.874
-        },
-        {
-          "word": "is",
-          "start": 29.874,
-          "end": 30.317
-        },
-        {
-          "word": "linked",
-          "start": 30.317,
-          "end": 30.76
-        },
-        {
-          "word": "with",
-          "start": 30.76,
-          "end": 31.203
-        },
-        {
-          "word": "different",
-          "start": 31.203,
-          "end": 31.646
-        },
-        {
-          "word": "states",
-          "start": 31.646,
-          "end": 32.089
-        },
-        {
-          "word": "such",
-          "start": 32.089,
-          "end": 32.532
-        },
-        {
-          "word": "as",
-          "start": 32.532,
-          "end": 32.975
-        },
-        {
-          "word": "sleep,",
-          "start": 32.975,
-          "end": 33.418
-        },
-        {
-          "word": "relaxation,",
-          "start": 33.418,
-          "end": 33.861
-        },
-        {
-          "word": "focus,",
-          "start": 33.861,
-          "end": 34.304
-        },
-        {
-          "word": "and",
-          "start": 34.304,
-          "end": 34.747
-        },
-        {
-          "word": "active",
-          "start": 34.747,
-          "end": 35.19
-        },
-        {
-          "word": "processing.",
-          "start": 35.19,
-          "end": 35.633
-        }
-      ]
-    },
-    {
-      "id": "importance",
-      "title": "Why EEG Matters",
-      "start": 35.64,
-      "end": 50.36,
-      "duration": 14.72,
-      "text": "EEG matters because it is noninvasive, fast, and useful in medicine, research, and brain-computer interfaces. It helps us study attention, detect seizures, and build systems that respond to brain activity.",
-      "word_timings": [
-        {
-          "word": "EEG",
-          "start": 35.64,
-          "end": 36.131
-        },
-        {
-          "word": "matters",
-          "start": 36.131,
-          "end": 36.622
-        },
-        {
-          "word": "because",
-          "start": 36.622,
-          "end": 37.113
-        },
-        {
-          "word": "it",
-          "start": 37.113,
-          "end": 37.604
-        },
-        {
-          "word": "is",
-          "start": 37.604,
-          "end": 38.095
-        },
-        {
-          "word": "noninvasive,",
-          "start": 38.095,
-          "end": 38.586
-        },
-        {
-          "word": "fast,",
-          "start": 38.586,
-          "end": 39.077
-        },
-        {
-          "word": "and",
-          "start": 39.077,
-          "end": 39.568
-        },
-        {
-          "word": "useful",
-          "start": 39.568,
-          "end": 40.059
-        },
-        {
-          "word": "in",
-          "start": 40.059,
-          "end": 40.55
-        },
-        {
-          "word": "medicine,",
-          "start": 40.55,
-          "end": 41.041
-        },
-        {
-          "word": "research,",
-          "start": 41.041,
-          "end": 41.532
-        },
-        {
-          "word": "and",
-          "start": 41.532,
-          "end": 42.023
-        },
-        {
-          "word": "brain-computer",
-          "start": 42.023,
-          "end": 42.514
-        },
-        {
-          "word": "interfaces.",
-          "start": 42.514,
-          "end": 43.005
-        },
-        {
-          "word": "It",
-          "start": 43.005,
-          "end": 43.496
-        },
-        {
-          "word": "helps",
-          "start": 43.496,
-          "end": 43.987
-        },
-        {
-          "word": "us",
-          "start": 43.987,
-          "end": 44.478
-        },
-        {
-          "word": "study",
-          "start": 44.478,
-          "end": 44.969
-        },
-        {
-          "word": "attention,",
-          "start": 44.969,
-          "end": 45.46
-        },
-        {
-          "word": "detect",
-          "start": 45.46,
-          "end": 45.951
-        },
-        {
-          "word": "seizures,",
-          "start": 45.951,
-          "end": 46.442
-        },
-        {
-          "word": "and",
-          "start": 46.442,
-          "end": 46.933
-        },
-        {
-          "word": "build",
-          "start": 46.933,
-          "end": 47.424
-        },
-        {
-          "word": "systems",
-          "start": 47.424,
-          "end": 47.915
+          "word": "signal",
+          "start": 2.27,
+          "end": 2.724
         },
         {
           "word": "that",
-          "start": 47.915,
-          "end": 48.406
+          "start": 2.724,
+          "end": 3.178
         },
         {
-          "word": "respond",
-          "start": 48.406,
-          "end": 48.897
+          "word": "looks",
+          "start": 3.178,
+          "end": 3.632
         },
         {
-          "word": "to",
-          "start": 48.897,
-          "end": 49.388
+          "word": "intense,",
+          "start": 3.632,
+          "end": 4.086
+        },
+        {
+          "word": "dramatic,",
+          "start": 4.086,
+          "end": 4.54
+        },
+        {
+          "word": "and",
+          "start": 4.54,
+          "end": 4.994
+        },
+        {
+          "word": "completely",
+          "start": 4.994,
+          "end": 5.448
+        },
+        {
+          "word": "real.",
+          "start": 5.448,
+          "end": 5.902
+        },
+        {
+          "word": "Sometimes",
+          "start": 5.902,
+          "end": 6.356
+        },
+        {
+          "word": "the",
+          "start": 6.356,
+          "end": 6.81
+        },
+        {
+          "word": "most",
+          "start": 6.81,
+          "end": 7.264
+        },
+        {
+          "word": "exciting",
+          "start": 7.264,
+          "end": 7.718
         },
         {
           "word": "brain",
-          "start": 49.388,
-          "end": 49.879
+          "start": 7.718,
+          "end": 8.172
         },
         {
-          "word": "activity.",
-          "start": 49.879,
-          "end": 50.37
+          "word": "wave",
+          "start": 8.172,
+          "end": 8.626
+        },
+        {
+          "word": "on",
+          "start": 8.626,
+          "end": 9.08
+        },
+        {
+          "word": "screen",
+          "start": 9.08,
+          "end": 9.534
+        },
+        {
+          "word": "is",
+          "start": 9.534,
+          "end": 9.988
+        },
+        {
+          "word": "just",
+          "start": 9.988,
+          "end": 10.442
+        },
+        {
+          "word": "noise",
+          "start": 10.442,
+          "end": 10.896
+        },
+        {
+          "word": "wearing",
+          "start": 10.896,
+          "end": 11.35
+        },
+        {
+          "word": "a",
+          "start": 11.35,
+          "end": 11.804
+        },
+        {
+          "word": "costume.",
+          "start": 11.804,
+          "end": 12.258
+        }
+      ]
+    },
+    {
+      "id": "brain_electricity",
+      "title": "Your Brain Produces Electricity",
+      "start": 12.25,
+      "end": 21.47,
+      "duration": 9.22,
+      "text": "Your thoughts run on electricity. Tiny flashes race across your brain every second, like a living city lighting up from the inside.",
+      "word_timings": [
+        {
+          "word": "Your",
+          "start": 12.25,
+          "end": 12.669
+        },
+        {
+          "word": "thoughts",
+          "start": 12.669,
+          "end": 13.088
+        },
+        {
+          "word": "run",
+          "start": 13.088,
+          "end": 13.507
+        },
+        {
+          "word": "on",
+          "start": 13.507,
+          "end": 13.926
+        },
+        {
+          "word": "electricity.",
+          "start": 13.926,
+          "end": 14.345
+        },
+        {
+          "word": "Tiny",
+          "start": 14.345,
+          "end": 14.764
+        },
+        {
+          "word": "flashes",
+          "start": 14.764,
+          "end": 15.183
+        },
+        {
+          "word": "race",
+          "start": 15.183,
+          "end": 15.602
+        },
+        {
+          "word": "across",
+          "start": 15.602,
+          "end": 16.021
+        },
+        {
+          "word": "your",
+          "start": 16.021,
+          "end": 16.44
+        },
+        {
+          "word": "brain",
+          "start": 16.44,
+          "end": 16.859
+        },
+        {
+          "word": "every",
+          "start": 16.859,
+          "end": 17.278
+        },
+        {
+          "word": "second,",
+          "start": 17.278,
+          "end": 17.697
+        },
+        {
+          "word": "like",
+          "start": 17.697,
+          "end": 18.116
+        },
+        {
+          "word": "a",
+          "start": 18.116,
+          "end": 18.535
+        },
+        {
+          "word": "living",
+          "start": 18.535,
+          "end": 18.954
+        },
+        {
+          "word": "city",
+          "start": 18.954,
+          "end": 19.373
+        },
+        {
+          "word": "lighting",
+          "start": 19.373,
+          "end": 19.792
+        },
+        {
+          "word": "up",
+          "start": 19.792,
+          "end": 20.211
+        },
+        {
+          "word": "from",
+          "start": 20.211,
+          "end": 20.63
+        },
+        {
+          "word": "the",
+          "start": 20.63,
+          "end": 21.049
+        },
+        {
+          "word": "inside.",
+          "start": 21.049,
+          "end": 21.468
+        }
+      ]
+    },
+    {
+      "id": "no_phd",
+      "title": "You Do Not Need a PhD",
+      "start": 21.47,
+      "end": 32.36,
+      "duration": 10.89,
+      "text": "Reading brain patterns is easier than people think. You do not need a genius IQ, you just need to notice what changes, what repeats, and what lights up.",
+      "word_timings": [
+        {
+          "word": "Reading",
+          "start": 21.47,
+          "end": 21.859
+        },
+        {
+          "word": "brain",
+          "start": 21.859,
+          "end": 22.248
+        },
+        {
+          "word": "patterns",
+          "start": 22.248,
+          "end": 22.637
+        },
+        {
+          "word": "is",
+          "start": 22.637,
+          "end": 23.026
+        },
+        {
+          "word": "easier",
+          "start": 23.026,
+          "end": 23.415
+        },
+        {
+          "word": "than",
+          "start": 23.415,
+          "end": 23.804
+        },
+        {
+          "word": "people",
+          "start": 23.804,
+          "end": 24.193
+        },
+        {
+          "word": "think.",
+          "start": 24.193,
+          "end": 24.582
+        },
+        {
+          "word": "You",
+          "start": 24.582,
+          "end": 24.971
+        },
+        {
+          "word": "do",
+          "start": 24.971,
+          "end": 25.36
+        },
+        {
+          "word": "not",
+          "start": 25.36,
+          "end": 25.749
+        },
+        {
+          "word": "need",
+          "start": 25.749,
+          "end": 26.138
+        },
+        {
+          "word": "a",
+          "start": 26.138,
+          "end": 26.527
+        },
+        {
+          "word": "genius",
+          "start": 26.527,
+          "end": 26.916
+        },
+        {
+          "word": "IQ,",
+          "start": 26.916,
+          "end": 27.305
+        },
+        {
+          "word": "you",
+          "start": 27.305,
+          "end": 27.694
+        },
+        {
+          "word": "just",
+          "start": 27.694,
+          "end": 28.083
+        },
+        {
+          "word": "need",
+          "start": 28.083,
+          "end": 28.472
+        },
+        {
+          "word": "to",
+          "start": 28.472,
+          "end": 28.861
+        },
+        {
+          "word": "notice",
+          "start": 28.861,
+          "end": 29.25
+        },
+        {
+          "word": "what",
+          "start": 29.25,
+          "end": 29.639
+        },
+        {
+          "word": "changes,",
+          "start": 29.639,
+          "end": 30.028
+        },
+        {
+          "word": "what",
+          "start": 30.028,
+          "end": 30.417
+        },
+        {
+          "word": "repeats,",
+          "start": 30.417,
+          "end": 30.806
+        },
+        {
+          "word": "and",
+          "start": 30.806,
+          "end": 31.195
+        },
+        {
+          "word": "what",
+          "start": 31.195,
+          "end": 31.584
+        },
+        {
+          "word": "lights",
+          "start": 31.584,
+          "end": 31.973
+        },
+        {
+          "word": "up.",
+          "start": 31.973,
+          "end": 32.362
         }
       ]
     }

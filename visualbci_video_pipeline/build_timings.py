@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from config import AUDIO_DIR, ensure_directories
 from common import media_duration, words_per_second, write_json
-from script_data import SEGMENTS
+from script_data import SEGMENTS, TOPIC
 
 
 def word_timings(text: str, start: float, duration: float) -> list[dict]:
@@ -49,7 +49,7 @@ def main() -> None:
         cursor = end
 
     payload = {
-        "topic": "What is EEG?",
+        "topic": TOPIC,
         "total_duration": round(cursor, 2),
         "segments": timings,
     }

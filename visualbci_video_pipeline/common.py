@@ -42,7 +42,11 @@ def media_duration(path: Path) -> float:
         capture_output=True,
         text=True,
     )
-    return float(result.stdout.strip())
+    output = result.stdout.strip()
+    try:
+        return float(output)
+    except ValueError:
+        return 0.0
 
 
 def words_per_second(text: str) -> float:
