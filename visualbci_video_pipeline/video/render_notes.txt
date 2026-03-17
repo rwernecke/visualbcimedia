@@ -1,1 +1,0 @@
-Rendered provider-generated reel visuals when available, otherwise Manim fallback, then layered captions and waveform overlays with ffmpeg.

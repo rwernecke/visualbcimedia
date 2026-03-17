@@ -1,0 +1,306 @@
+:root {
+  --bg: #050814;
+  --bg-soft: #0d1730;
+  --ink: #f5f9ff;
+  --muted: rgba(210, 224, 255, 0.72);
+  --accent: #64e5ff;
+  --accent-soft: rgba(100, 229, 255, 0.16);
+  --violet: #8890ff;
+  --frame-width: min(100vw, calc(100vh * 9 / 16));
+  --frame-height: min(100vh, calc(100vw * 16 / 9));
+  --safe-pad: clamp(24px, 4vw, 42px);
+  --title-font: "Arial Black", Impact, Haettenschweiler, sans-serif;
+  --body-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top, rgba(18, 45, 84, 0.85), transparent 34%),
+    linear-gradient(180deg, #02050d 0%, #060b16 54%, #02050d 100%);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: var(--ink);
+  font-family: var(--body-font);
+}
+
+.app-shell {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.frame {
+  position: relative;
+  width: var(--frame-width);
+  height: var(--frame-height);
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 52% 18%, rgba(86, 156, 255, 0.16), transparent 24%),
+    radial-gradient(circle at 14% 76%, rgba(100, 229, 255, 0.1), transparent 28%),
+    linear-gradient(180deg, #050914 0%, #080d19 46%, #040711 100%);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+.frame-aura,
+.frame-noise,
+.frame-vignette,
+.signal-grid,
+.signal-scan {
+  position: absolute;
+  inset: 0;
+}
+
+.frame-aura {
+  border-radius: 50%;
+  filter: blur(20px);
+  animation: floatAura 8s ease-in-out infinite;
+}
+
+.frame-aura-one {
+  inset: auto auto 56% -18%;
+  width: 68%;
+  height: 34%;
+  background: radial-gradient(circle, rgba(106, 125, 255, 0.24), rgba(106, 125, 255, 0));
+}
+
+.frame-aura-two {
+  inset: 60% -12% auto auto;
+  width: 58%;
+  height: 28%;
+  background: radial-gradient(circle, rgba(78, 215, 255, 0.22), rgba(78, 215, 255, 0));
+  animation-delay: -3.2s;
+}
+
+.frame-noise {
+  opacity: 0.1;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 3px 3px, 3px 3px;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.frame-vignette {
+  background:
+    radial-gradient(circle at center, transparent 42%, rgba(0, 0, 0, 0.6) 100%);
+  pointer-events: none;
+}
+
+.scene {
+  position: absolute;
+  left: var(--safe-pad);
+  right: var(--safe-pad);
+  z-index: 2;
+  top: 11%;
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.copy-stack {
+  display: grid;
+  gap: 8px;
+  max-width: 88%;
+  min-height: 40vh;
+  align-content: start;
+}
+
+.copy-line {
+  margin: 0;
+  font-family: var(--title-font);
+  font-size: clamp(60px, 10.6vw, 116px);
+  line-height: 0.86;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-wrap: balance;
+  opacity: 0;
+  transform: translate3d(0, 36px, 0) scale(0.96);
+  transition:
+    opacity 420ms cubic-bezier(0.18, 0.9, 0.22, 1),
+    transform 420ms cubic-bezier(0.18, 0.9, 0.22, 1),
+    color 260ms ease,
+    text-shadow 260ms ease;
+  text-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.copy-line.size-sm {
+  font-size: clamp(52px, 9vw, 88px);
+}
+
+.copy-line.size-md {
+  font-size: clamp(62px, 10.4vw, 110px);
+}
+
+.copy-line.size-lg {
+  font-size: clamp(76px, 12.4vw, 132px);
+}
+
+.copy-line.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.copy-line.is-exiting {
+  opacity: 0;
+  transform: translate3d(0, -18px, 0) scale(1.01);
+}
+
+.copy-line.is-muted {
+  color: rgba(245, 249, 255, 0.28);
+}
+
+.copy-line .emphasis {
+  color: #ffffff;
+  text-shadow:
+    0 0 28px rgba(100, 229, 255, 0.2),
+    0 10px 34px rgba(0, 0, 0, 0.28);
+}
+
+.copy-line .glow-word {
+  color: var(--accent);
+  text-shadow:
+    0 0 24px rgba(100, 229, 255, 0.35),
+    0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+.signal-stage {
+  position: absolute;
+  inset: 0;
+}
+
+.signal-grid {
+  opacity: 0.17;
+  background-image:
+    linear-gradient(rgba(100, 229, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100, 229, 255, 0.08) 1px, transparent 1px);
+  background-size: 100% 9%, 9% 100%;
+  mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 1) 100%);
+}
+
+.signal-scan {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(100, 229, 255, 0.02) 34%,
+    rgba(100, 229, 255, 0.1) 50%,
+    rgba(100, 229, 255, 0.02) 68%,
+    transparent 100%
+  );
+  transform: translateY(-110%);
+  animation: scanSweep 8s linear infinite;
+  opacity: 0.5;
+}
+
+.signal-svg {
+  position: absolute;
+  inset: 43% -6% 5% -6%;
+  width: 100%;
+  height: 52%;
+}
+
+.signal-line,
+.signal-glow {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.signal-glow {
+  stroke: url(#traceGlow);
+  stroke-width: 14;
+  filter: url(#lineBlur);
+  opacity: 0.92;
+  stroke-dasharray: 2100;
+  stroke-dashoffset: 2100;
+  animation:
+    drawLine 8s linear infinite,
+    pulseGlow 8s ease-in-out infinite;
+}
+
+.signal-line {
+  stroke: rgba(235, 246, 255, 0.92);
+  stroke-width: 3.2;
+  stroke-dasharray: 2100;
+  stroke-dashoffset: 2100;
+  animation: drawLine 8s linear infinite;
+}
+
+@keyframes drawLine {
+  0%,
+  5% {
+    stroke-dashoffset: 2100;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  76% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -240;
+    opacity: 0.24;
+  }
+}
+
+@keyframes scanSweep {
+  0% {
+    transform: translateY(-110%);
+  }
+  100% {
+    transform: translateY(110%);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.78;
+  }
+  34% {
+    opacity: 0.98;
+  }
+  68% {
+    opacity: 0.88;
+  }
+}
+
+@keyframes floatAura {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0) scale(1.05);
+  }
+}
+
+@media (max-width: 520px) {
+  .scene {
+    top: 11%;
+  }
+
+  .copy-stack {
+    max-width: 96%;
+  }
+}

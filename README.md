@@ -1,62 +1,41 @@
-# Viral Brain Video Pipeline
+# VisualBCI Media
 
-This repository contains a short-form brain video pipeline optimized for
-Instagram Reels and TikTok. The stack is:
+This repository now keeps two active pieces:
 
-- `manim` for visuals
-- `ElevenLabs` for voice
-- `ffmpeg` for captions, composition, and vertical exports
+- `eeg-cheat-sheet/` for the EEG guide and PDF workflow
+- `motion-reels/` for silent 9:16 motion-graphics webpages used as reel visuals
 
-The current content direction prioritizes curiosity, beautiful visuals, strong
-hooks, short duration, and high production quality over lectures or product
-promotion.
+## Motion Reels
 
-```text
-visualbci_video_pipeline/
-  manim_scene.py
-  generate_audio.py
-  build_timings.py
-  scenes.py
-  render_modal.py
-  compose_video.py
-  generate_reels.py
+The new reel workflow is intentionally simple:
 
-  audio/
-  video/
-  captions/
-  reels/
-  final/
-```
+- full-screen vertical webpage
+- dark background
+- animated EEG line
+- large kinetic text
+- subtle fade and slide transitions
+- one scene per script
+- designed around 8-second reels
 
-## What it does today
-
-- stores short, hook-first brain reel scripts
-- generates ElevenLabs narration command plans
-- estimates timings from rendered or fallback audio
-- builds a Manim scene manifest for each segment
-- overlays animated captions and waveform styling with ffmpeg
-- creates ffmpeg command plans for the assembled full video and reels
-
-## Quick start
+Preview locally:
 
 ```bash
-python3 visualbci_video_pipeline/generate_audio.py
-python3 visualbci_video_pipeline/build_timings.py
-python3 visualbci_video_pipeline/scenes.py
-python3 visualbci_video_pipeline/render_modal.py
-python3 visualbci_video_pipeline/compose_video.py
-python3 visualbci_video_pipeline/generate_reels.py
+cd /Users/rafael/visualbcimedia/motion-reels
+python3 -m http.server 4174
 ```
 
-Outputs are written into the subfolders under `visualbci_video_pipeline/`.
+Open `http://localhost:4174/index.html?scene=1`
 
-## Requirements
+## EEG Cheat Sheet
 
-- `ELEVENLABS_API_KEY`
-- `ELEVENLABS_VOICE_ID`
-- `manim`
-- `ffmpeg`
+The EEG cheat sheet remains unchanged and stays in:
 
-If ElevenLabs credentials or Manim are missing, the pipeline still writes the
-required command plans and manifests so the workflow can be completed once the
-environment is ready.
+```text
+/Users/rafael/visualbcimedia/eeg-cheat-sheet
+```
+
+Its local instructions are in:
+
+```text
+/Users/rafael/visualbcimedia/eeg-cheat-sheet/README.md
+```

@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VisualBCI Premium Neurotech Reel</title>
+    <style>
+      :root {
+        --bg-0: #03060d;
+        --bg-1: #07111d;
+        --bg-2: #0b1829;
+        --ink: #edf4ff;
+        --muted: rgba(216, 229, 246, 0.68);
+        --muted-2: rgba(194, 211, 232, 0.46);
+        --line: rgba(158, 198, 242, 0.14);
+        --cyan: #68e4ff;
+        --cyan-soft: rgba(104, 228, 255, 0.18);
+        --blue: #86a7ff;
+        --violet: #9d8bff;
+        --panel: rgba(10, 18, 31, 0.42);
+        --panel-strong: rgba(11, 20, 34, 0.7);
+        --frame-width: min(100vw, calc(100vh * 9 / 16));
+        --frame-height: min(100vh, calc(100vw * 16 / 9));
+        --pad-x: clamp(34px, 4.8vw, 56px);
+        --pad-y: clamp(38px, 4.6vh, 62px);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background:
+          radial-gradient(circle at 50% 0%, rgba(30, 73, 126, 0.4), transparent 32%),
+          linear-gradient(180deg, #02040a 0%, #07101a 45%, #020409 100%);
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        color: var(--ink);
+        font-family: "SF Pro Display", "Avenir Next", "Helvetica Neue", sans-serif;
+      }
+
+      .frame {
+        position: relative;
+        width: var(--frame-width);
+        height: var(--frame-height);
+        aspect-ratio: 9 / 16;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 22% 16%, rgba(104, 228, 255, 0.08), transparent 24%),
+          radial-gradient(circle at 80% 68%, rgba(134, 167, 255, 0.09), transparent 26%),
+          linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 42%, var(--bg-0) 100%);
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.05),
+          0 36px 110px rgba(0, 0, 0, 0.56);
+      }
+
+      canvas,
+      .atmosphere,
+      .scanlines,
+      .vignette,
+      .content,
+      .annotations,
+      .brand-rail,
+      .micro-card {
+        position: absolute;
+        inset: 0;
+      }
+
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+
+      .atmosphere {
+        background:
+          radial-gradient(circle at 50% 31%, rgba(104, 228, 255, 0.1), transparent 18%),
+          radial-gradient(circle at 66% 47%, rgba(157, 139, 255, 0.08), transparent 24%),
+          radial-gradient(circle at 48% 70%, rgba(104, 228, 255, 0.05), transparent 30%);
+        mix-blend-mode: screen;
+        pointer-events: none;
+        animation: atmosphereShift 8s ease-in-out infinite;
+      }
+
+      .scanlines {
+        background:
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.018) 0%,
+            rgba(255, 255, 255, 0) 36%,
+            rgba(255, 255, 255, 0.024) 68%,
+            rgba(255, 255, 255, 0.012) 100%
+          ),
+          repeating-linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.025) 0 1px,
+            transparent 1px 6px
+          );
+        opacity: 0.28;
+        mix-blend-mode: soft-light;
+        pointer-events: none;
+      }
+
+      .vignette {
+        background:
+          radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.5) 100%);
+        pointer-events: none;
+      }
+
+      .content {
+        z-index: 3;
+        padding: var(--pad-y) var(--pad-x);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        pointer-events: none;
+      }
+
+      .copy-group {
+        width: min(46%, 380px);
+        display: grid;
+        gap: 14px;
+        padding-top: 4%;
+        animation: copyFloat 8s ease-in-out infinite;
+      }
+
+      .eyebrow {
+        margin: 0;
+        color: rgba(212, 228, 246, 0.76);
+        font-size: clamp(10px, 1.15vw, 13px);
+        letter-spacing: 0.34em;
+        text-transform: uppercase;
+      }
+
+      .headline {
+        margin: 0;
+        font-size: clamp(38px, 3.6vw, 58px);
+        line-height: 0.98;
+        letter-spacing: -0.045em;
+        font-weight: 520;
+        max-width: 10ch;
+        text-wrap: balance;
+      }
+
+      .headline .accent {
+        color: #ffffff;
+        text-shadow: 0 0 22px rgba(104, 228, 255, 0.12);
+      }
+
+      .supporting {
+        margin: 0;
+        max-width: 22ch;
+        color: var(--muted);
+        font-size: clamp(15px, 1.45vw, 19px);
+        line-height: 1.45;
+        letter-spacing: -0.01em;
+      }
+
+      .cta {
+        display: inline-flex;
+        width: fit-content;
+        align-items: center;
+        gap: 10px;
+        margin-top: 8px;
+        padding: 11px 15px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+        color: rgba(236, 244, 255, 0.88);
+        font-size: clamp(11px, 1.05vw, 13px);
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        backdrop-filter: blur(14px);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.05),
+          0 10px 26px rgba(0, 0, 0, 0.22);
+      }
+
+      .cta::after {
+        content: "";
+        width: 22px;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(104, 228, 255, 0.2), rgba(104, 228, 255, 0.9));
+        box-shadow: 0 0 14px rgba(104, 228, 255, 0.35);
+      }
+
+      .brand-rail {
+        z-index: 3;
+        padding: var(--pad-y) var(--pad-x);
+        pointer-events: none;
+      }
+
+      .brand-chip {
+        position: absolute;
+        top: calc(var(--pad-y) + 8px);
+        right: var(--pad-x);
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 12px;
+        border-radius: 999px;
+        background: rgba(8, 14, 25, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        color: rgba(233, 242, 255, 0.72);
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        backdrop-filter: blur(14px);
+      }
+
+      .brand-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: radial-gradient(circle, #b8fbff 0%, var(--cyan) 48%, rgba(104, 228, 255, 0) 100%);
+        box-shadow: 0 0 18px rgba(104, 228, 255, 0.55);
+      }
+
+      .annotations {
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .annotation {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: rgba(221, 233, 248, 0.58);
+        font-size: clamp(9px, 0.95vw, 11px);
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        opacity: 0;
+        animation: annotationPulse 8s ease-in-out infinite;
+      }
+
+      .annotation::before {
+        content: "";
+        width: 28px;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.05), rgba(104, 228, 255, 0.8));
+      }
+
+      .annotation.alpha {
+        top: 30%;
+        left: 12%;
+        animation-delay: 0.8s;
+      }
+
+      .annotation.occipital {
+        top: 49%;
+        right: 11%;
+        animation-delay: 2.3s;
+      }
+
+      .annotation.noise {
+        bottom: 24%;
+        left: 14%;
+        animation-delay: 4.6s;
+      }
+
+      .micro-card {
+        z-index: 3;
+        pointer-events: none;
+      }
+
+      .card {
+        position: absolute;
+        right: 8.4%;
+        bottom: 17%;
+        width: min(29%, 220px);
+        padding: 16px 16px 18px;
+        border-radius: 22px;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+          rgba(7, 13, 24, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.05),
+          0 22px 44px rgba(0, 0, 0, 0.22);
+        backdrop-filter: blur(16px);
+        opacity: 0;
+        transform: translate3d(0, 18px, 0);
+        animation: cardReveal 8s ease-in-out infinite;
+      }
+
+      .card-label,
+      .card-value,
+      .card-meta {
+        margin: 0;
+      }
+
+      .card-label {
+        color: rgba(221, 233, 248, 0.54);
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      .card-value {
+        margin-top: 10px;
+        font-size: clamp(25px, 2.3vw, 34px);
+        letter-spacing: -0.04em;
+        color: #f7fbff;
+      }
+
+      .card-meta {
+        margin-top: 8px;
+        color: rgba(208, 223, 242, 0.62);
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .card-meter {
+        margin-top: 14px;
+        height: 4px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.05);
+        overflow: hidden;
+      }
+
+      .card-meter::after {
+        content: "";
+        display: block;
+        width: 62%;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, rgba(104, 228, 255, 0.35), rgba(157, 139, 255, 0.8));
+        box-shadow: 0 0 16px rgba(104, 228, 255, 0.35);
+        animation: meterFlow 8s ease-in-out infinite;
+      }
+
+      @keyframes atmosphereShift {
+        0%,
+        100% {
+          opacity: 0.85;
+          transform: scale(1) translate3d(0, 0, 0);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.05) translate3d(0, -1.5%, 0);
+        }
+      }
+
+      @keyframes copyFloat {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0);
+        }
+        50% {
+          transform: translate3d(0, -8px, 0);
+        }
+      }
+
+      @keyframes annotationPulse {
+        0%,
+        100% {
+          opacity: 0;
+          transform: translate3d(0, 10px, 0);
+        }
+        12%,
+        58% {
+          opacity: 0.52;
+          transform: translate3d(0, 0, 0);
+        }
+        74% {
+          opacity: 0.22;
+        }
+      }
+
+      @keyframes cardReveal {
+        0%,
+        28%,
+        100% {
+          opacity: 0;
+          transform: translate3d(0, 18px, 0);
+        }
+        38%,
+        70% {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+        82% {
+          opacity: 0;
+          transform: translate3d(0, -10px, 0);
+        }
+      }
+
+      @keyframes meterFlow {
+        0%,
+        100% {
+          width: 46%;
+        }
+        45% {
+          width: 76%;
+        }
+        70% {
+          width: 62%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="frame">
+      <canvas id="scene" width="1080" height="1920" aria-hidden="true"></canvas>
+      <div class="atmosphere"></div>
+      <div class="scanlines"></div>
+
+      <section class="content" aria-label="VisualBCI signal reel">
+        <div class="copy-group">
+          <p class="eyebrow">VisualBCI Signal Guide</p>
+          <h1 class="headline">Brain activity leaves <span class="accent">patterns.</span></h1>
+          <p class="supporting">
+            EEG helps you see the signal change and learn what to look for.
+          </p>
+          <div class="cta">Learn to read them at VisualBCI</div>
+        </div>
+      </section>
+
+      <div class="brand-rail">
+        <div class="brand-chip">
+          <span class="brand-dot"></span>
+          <span>VisualBCI</span>
+        </div>
+      </div>
+
+      <section class="annotations" aria-hidden="true">
+        <div class="annotation alpha">Alpha Rise</div>
+        <div class="annotation occipital">Occipital Trace</div>
+        <div class="annotation noise">Noise Floor</div>
+      </section>
+
+      <div class="micro-card" aria-hidden="true">
+        <div class="card">
+          <p class="card-label">Signal Snapshot</p>
+          <p class="card-value">10.4 Hz</p>
+          <p class="card-meta">Alpha band coherence increases as the trace stabilizes.</p>
+          <div class="card-meter"></div>
+        </div>
+      </div>
+
+      <div class="vignette"></div>
+    </main>
+
+    <script>
+      const duration = 8000;
+      const canvas = document.getElementById("scene");
+      const context = canvas.getContext("2d");
+
+      function resizeCanvas() {
+        const rect = canvas.getBoundingClientRect();
+        const ratio = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.round(rect.width * ratio);
+        canvas.height = Math.round(rect.height * ratio);
+        context.setTransform(ratio, 0, 0, ratio, 0, 0);
+      }
+
+      function clamp(value, min, max) {
+        return Math.max(min, Math.min(max, value));
+      }
+
+      function easeInOutSine(value) {
+        return -(Math.cos(Math.PI * value) - 1) / 2;
+      }
+
+      function pulse(value, start, end, feather = 0.12) {
+        if (value < start - feather || value > end + feather) {
+          return 0;
+        }
+
+        const fadeIn = clamp((value - (start - feather)) / feather, 0, 1);
+        const fadeOut = clamp(((end + feather) - value) / feather, 0, 1);
+        return Math.min(fadeIn, fadeOut);
+      }
+
+      function smoothPath(points) {
+        if (points.length < 2) {
+          return;
+        }
+
+        context.beginPath();
+        context.moveTo(points[0].x, points[0].y);
+
+        for (let index = 1; index < points.length - 1; index += 1) {
+          const current = points[index];
+          const next = points[index + 1];
+          const midX = (current.x + next.x) / 2;
+          const midY = (current.y + next.y) / 2;
+          context.quadraticCurveTo(current.x, current.y, midX, midY);
+        }
+
+        const last = points[points.length - 1];
+        context.lineTo(last.x, last.y);
+      }
+
+      function pointOnPath(points, position) {
+        const clamped = clamp(position, 0, 0.9999);
+        const index = clamped * (points.length - 1);
+        const base = Math.floor(index);
+        const mix = index - base;
+        const current = points[base];
+        const next = points[Math.min(base + 1, points.length - 1)];
+
+        return {
+          x: current.x + (next.x - current.x) * mix,
+          y: current.y + (next.y - current.y) * mix
+        };
+      }
+
+      function roundedRectPath(x, y, width, height, radius) {
+        const corner = Math.min(radius, width / 2, height / 2);
+        context.beginPath();
+        context.moveTo(x + corner, y);
+        context.lineTo(x + width - corner, y);
+        context.quadraticCurveTo(x + width, y, x + width, y + corner);
+        context.lineTo(x + width, y + height - corner);
+        context.quadraticCurveTo(x + width, y + height, x + width - corner, y + height);
+        context.lineTo(x + corner, y + height);
+        context.quadraticCurveTo(x, y + height, x, y + height - corner);
+        context.lineTo(x, y + corner);
+        context.quadraticCurveTo(x, y, x + corner, y);
+        context.closePath();
+      }
+
+      function buildWavePoints(width, height, time, options = {}) {
+        const {
+          segments = 150,
+          baseline = 0.58,
+          amplitude = 110,
+          frequency = 1,
+          drift = 0,
+          offset = 0,
+          detail = 1
+        } = options;
+
+        const points = [];
+        const left = -width * 0.08;
+        const span = width * 1.16;
+        const baseY = height * baseline;
+
+        for (let index = 0; index <= segments; index += 1) {
+          const progress = index / segments;
+          const x = left + progress * span;
+          const phase = progress * Math.PI * 2 * frequency;
+          const envelope =
+            0.55 +
+            0.35 * Math.sin(progress * Math.PI * 1.2 + time * Math.PI * 2 + offset) +
+            0.1 * Math.cos(progress * Math.PI * 7.5 - time * Math.PI * 4);
+          const alphaBurst =
+            Math.sin((progress * 4.2 - time * 1.1 + offset) * Math.PI * 2) * amplitude * 0.42;
+          const secondary =
+            Math.cos((phase * 1.6 + time * Math.PI * 3.2 + offset) * detail) * amplitude * 0.18;
+          const tertiary =
+            Math.sin((phase * 3.8 - time * Math.PI * 5.4 + offset) * (detail * 0.92)) *
+            amplitude *
+            0.09;
+          const wave = Math.sin(phase + time * Math.PI * 2.4 + offset) * amplitude * envelope;
+          const driftY = Math.sin(time * Math.PI * 2 + progress * Math.PI * 2 + drift) * 10;
+
+          points.push({
+            x,
+            y: baseY + wave + alphaBurst + secondary + tertiary + driftY
+          });
+        }
+
+        return points;
+      }
+
+      function drawBackdrop(width, height, time) {
+        const gradient = context.createLinearGradient(0, 0, 0, height);
+        gradient.addColorStop(0, "#03060d");
+        gradient.addColorStop(0.42, "#091321");
+        gradient.addColorStop(1, "#02050b");
+        context.fillStyle = gradient;
+        context.fillRect(0, 0, width, height);
+
+        const bloomA = context.createRadialGradient(
+          width * 0.52,
+          height * 0.38,
+          0,
+          width * 0.52,
+          height * 0.38,
+          width * 0.34
+        );
+        bloomA.addColorStop(0, "rgba(83, 168, 255, 0.14)");
+        bloomA.addColorStop(0.42, "rgba(83, 168, 255, 0.06)");
+        bloomA.addColorStop(1, "rgba(83, 168, 255, 0)");
+        context.fillStyle = bloomA;
+        context.fillRect(0, 0, width, height);
+
+        const bloomB = context.createRadialGradient(
+          width * (0.2 + Math.sin(time * Math.PI * 2) * 0.01),
+          height * 0.18,
+          0,
+          width * 0.2,
+          height * 0.18,
+          width * 0.22
+        );
+        bloomB.addColorStop(0, "rgba(104, 228, 255, 0.12)");
+        bloomB.addColorStop(1, "rgba(104, 228, 255, 0)");
+        context.fillStyle = bloomB;
+        context.fillRect(0, 0, width, height);
+      }
+
+      function drawGrid(width, height, time) {
+        context.save();
+        context.globalAlpha = 0.55;
+        context.translate(0, Math.sin(time * Math.PI * 2) * 12);
+        context.strokeStyle = "rgba(110, 162, 220, 0.08)";
+        context.lineWidth = 1;
+
+        for (let x = width * 0.08; x <= width * 0.92; x += width * 0.07) {
+          context.beginPath();
+          context.moveTo(x, height * 0.18);
+          context.lineTo(x, height * 0.88);
+          context.stroke();
+        }
+
+        for (let y = height * 0.18; y <= height * 0.88; y += height * 0.035) {
+          context.beginPath();
+          context.moveTo(width * 0.06, y);
+          context.lineTo(width * 0.94, y);
+          context.stroke();
+        }
+
+        context.restore();
+      }
+
+      function drawPanels(width, height, time) {
+        const parallax = Math.sin(time * Math.PI * 2) * 18;
+        const cards = [
+          { x: width * 0.1, y: height * 0.48 + parallax * 0.5, w: width * 0.82, h: height * 0.105 },
+          { x: width * 0.14, y: height * 0.57 + parallax * 0.8, w: width * 0.72, h: height * 0.09 }
+        ];
+
+        cards.forEach((panel, index) => {
+          const gradient = context.createLinearGradient(panel.x, panel.y, panel.x, panel.y + panel.h);
+          gradient.addColorStop(0, index === 0 ? "rgba(255, 255, 255, 0.055)" : "rgba(255, 255, 255, 0.04)");
+          gradient.addColorStop(1, "rgba(255, 255, 255, 0.01)");
+          context.fillStyle = gradient;
+          context.strokeStyle = "rgba(255, 255, 255, 0.06)";
+          context.lineWidth = 1;
+          roundedRectPath(panel.x, panel.y, panel.w, panel.h, 24);
+          context.fill();
+          context.stroke();
+        });
+      }
+
+      function drawSpectrum(width, height, time) {
+        const panelX = width * 0.75;
+        const panelY = height * 0.2;
+        const panelW = width * 0.13;
+        const panelH = height * 0.28;
+        const glow = pulse(time, 0.24, 0.78, 0.22);
+
+        context.fillStyle = "rgba(10, 17, 28, 0.22)";
+        context.strokeStyle = "rgba(255, 255, 255, 0.06)";
+        context.lineWidth = 1;
+        roundedRectPath(panelX, panelY, panelW, panelH, 24);
+        context.fill();
+        context.stroke();
+
+        const bars = 18;
+        const barGap = panelW / (bars + 2);
+        for (let index = 0; index < bars; index += 1) {
+          const x = panelX + barGap * (index + 1);
+          const activity =
+            0.2 +
+            0.8 *
+              Math.abs(
+                Math.sin(time * Math.PI * 4.3 + index * 0.42) *
+                  Math.cos(time * Math.PI * 1.7 - index * 0.15)
+              );
+          const barHeight = panelH * (0.16 + activity * (0.5 + glow * 0.22));
+          const y = panelY + panelH - barHeight - 18;
+
+          const gradient = context.createLinearGradient(x, y, x, y + barHeight);
+          gradient.addColorStop(0, "rgba(104, 228, 255, 0.95)");
+          gradient.addColorStop(1, "rgba(104, 228, 255, 0.12)");
+          context.strokeStyle = gradient;
+          context.lineWidth = barGap * 0.42;
+          context.beginPath();
+          context.moveTo(x, y);
+          context.lineTo(x, y + barHeight);
+          context.stroke();
+        }
+      }
+
+      function drawWave(points, options = {}) {
+        const {
+          stroke = "rgba(255, 255, 255, 0.9)",
+          width = 3,
+          glow = "rgba(104, 228, 255, 0.35)",
+          glowWidth = 16,
+          alpha = 1
+        } = options;
+
+        context.save();
+        context.globalAlpha = alpha;
+        context.shadowBlur = glowWidth;
+        context.shadowColor = glow;
+        context.strokeStyle = stroke;
+        context.lineWidth = width;
+        context.lineCap = "round";
+        context.lineJoin = "round";
+        smoothPath(points);
+        context.stroke();
+        context.restore();
+      }
+
+      function drawPulseTravel(points, time, width, height) {
+        const glow = pulse(time, 0.12, 0.96, 0.1);
+        const positions = [time % 1, (time * 0.9 + 0.23) % 1, (time * 1.08 + 0.61) % 1];
+
+        positions.forEach((position, index) => {
+          const point = pointOnPath(points, position);
+          const radius = 10 + Math.sin(time * Math.PI * 4 + index) * 1.5;
+          const gradient = context.createRadialGradient(point.x, point.y, 0, point.x, point.y, 32);
+          gradient.addColorStop(0, `rgba(255,255,255,${0.95 * glow})`);
+          gradient.addColorStop(0.32, `rgba(104,228,255,${0.55 * glow})`);
+          gradient.addColorStop(1, "rgba(104,228,255,0)");
+          context.fillStyle = gradient;
+          context.beginPath();
+          context.arc(point.x, point.y, radius * 2.6, 0, Math.PI * 2);
+          context.fill();
+        });
+
+        const scanX = width * (0.16 + time * 0.72);
+        const scan = context.createLinearGradient(scanX - 36, 0, scanX + 36, 0);
+        scan.addColorStop(0, "rgba(104,228,255,0)");
+        scan.addColorStop(0.5, `rgba(104,228,255,${0.09 + glow * 0.08})`);
+        scan.addColorStop(1, "rgba(104,228,255,0)");
+        context.fillStyle = scan;
+        context.fillRect(scanX - 36, height * 0.2, 72, height * 0.64);
+      }
+
+      function drawParticles(points, time) {
+        for (let index = 0; index < 24; index += 1) {
+          const offset = (index / 24 + time * 0.08) % 1;
+          const point = pointOnPath(points, offset);
+          const drift = Math.sin(time * Math.PI * 5 + index) * 16;
+          const gradient = context.createRadialGradient(
+            point.x,
+            point.y + drift,
+            0,
+            point.x,
+            point.y + drift,
+            10
+          );
+          gradient.addColorStop(0, "rgba(173, 243, 255, 0.45)");
+          gradient.addColorStop(1, "rgba(173, 243, 255, 0)");
+          context.fillStyle = gradient;
+          context.beginPath();
+          context.arc(point.x, point.y + drift, 7, 0, Math.PI * 2);
+          context.fill();
+        }
+      }
+
+      function drawAxisLabels(width, height, time) {
+        context.save();
+        context.globalAlpha = 0.55;
+        context.font = "500 10px SF Mono, SFMono-Regular, ui-monospace, Menlo, monospace";
+        context.fillStyle = "rgba(214, 229, 247, 0.5)";
+
+        const labels = [
+          { text: "Signal", x: width * 0.085, y: height * 0.52 },
+          { text: "Amplitude", x: width * 0.085, y: height * 0.555 },
+          { text: "10 Hz Window", x: width * 0.758, y: height * 0.5 }
+        ];
+
+        labels.forEach((label, index) => {
+          context.globalAlpha = 0.4 + 0.15 * Math.sin(time * Math.PI * 2 + index);
+          context.fillText(label.text.toUpperCase(), label.x, label.y);
+        });
+
+        context.restore();
+      }
+
+      function renderFrame(now) {
+        const width = canvas.clientWidth;
+        const height = canvas.clientHeight;
+        const time = ((now % duration) / duration);
+        const sceneDrift = Math.sin(time * Math.PI * 2) * 14;
+
+        context.clearRect(0, 0, width, height);
+        drawBackdrop(width, height, time);
+
+        context.save();
+        context.translate(0, sceneDrift);
+        drawGrid(width, height, time);
+        drawPanels(width, height, time);
+
+        const backWave = buildWavePoints(width, height, time, {
+          baseline: 0.43,
+          amplitude: 48,
+          frequency: 1.15,
+          drift: 0.8,
+          offset: 0.5,
+          detail: 0.7
+        });
+        const midWave = buildWavePoints(width, height, time, {
+          baseline: 0.515,
+          amplitude: 70,
+          frequency: 1.34,
+          drift: 1.7,
+          offset: 1.2,
+          detail: 0.85
+        });
+        const mainWave = buildWavePoints(width, height, time, {
+          baseline: 0.595,
+          amplitude: 102 + 18 * easeInOutSine((Math.sin(time * Math.PI * 2) + 1) / 2),
+          frequency: 1.48,
+          drift: 2.4,
+          offset: 0.2,
+          detail: 1
+        });
+
+        drawWave(backWave, {
+          stroke: "rgba(118, 170, 226, 0.2)",
+          width: 1.4,
+          glow: "rgba(118, 170, 226, 0.06)",
+          glowWidth: 8,
+          alpha: 0.9
+        });
+        drawWave(midWave, {
+          stroke: "rgba(140, 193, 247, 0.26)",
+          width: 1.8,
+          glow: "rgba(104, 228, 255, 0.09)",
+          glowWidth: 10,
+          alpha: 0.92
+        });
+        drawWave(mainWave, {
+          stroke: "rgba(242, 248, 255, 0.92)",
+          width: 3,
+          glow: "rgba(104, 228, 255, 0.34)",
+          glowWidth: 18,
+          alpha: 1
+        });
+
+        drawPulseTravel(mainWave, time, width, height);
+        drawParticles(mainWave, time);
+        drawSpectrum(width, height, time);
+        drawAxisLabels(width, height, time);
+        context.restore();
+
+        window.requestAnimationFrame(renderFrame);
+      }
+
+      resizeCanvas();
+      window.addEventListener("resize", resizeCanvas);
+      window.requestAnimationFrame(renderFrame);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brain Electricity Reel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <div class="frame">
+        <div class="frame-aura frame-aura-one"></div>
+        <div class="frame-aura frame-aura-two"></div>
+        <div class="frame-noise"></div>
+        <div class="frame-vignette"></div>
+
+        <section class="scene" aria-live="polite">
+          <div class="copy-stack" id="copy-stack">
+            <p class="copy-line" id="line-1"></p>
+            <p class="copy-line" id="line-2"></p>
+            <p class="copy-line" id="line-3"></p>
+          </div>
+        </section>
+
+        <section class="signal-stage" aria-hidden="true">
+          <div class="signal-grid"></div>
+          <div class="signal-scan"></div>
+          <svg
+            class="signal-svg"
+            viewBox="0 0 900 540"
+            preserveAspectRatio="none"
+            role="presentation"
+          >
+            <defs>
+              <linearGradient id="traceGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#4ed7ff" stop-opacity="0.05" />
+                <stop offset="28%" stop-color="#4ed7ff" stop-opacity="0.78" />
+                <stop offset="58%" stop-color="#7a7cff" stop-opacity="0.92" />
+                <stop offset="70%" stop-color="#ffffff" stop-opacity="0.95" />
+                <stop offset="100%" stop-color="#4ed7ff" stop-opacity="0.12" />
+              </linearGradient>
+              <filter id="lineBlur" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="7" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <path class="signal-glow" id="signal-glow"></path>
+            <path class="signal-line" id="signal-line"></path>
+          </svg>
+        </section>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

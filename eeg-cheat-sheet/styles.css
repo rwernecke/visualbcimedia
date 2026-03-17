@@ -486,6 +486,24 @@ body {
   background: linear-gradient(180deg, #f8fbff, #eef5ff);
 }
 
+.support-card {
+  margin-top: 18px;
+  padding: 0.19in 0.22in;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.support-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.48;
+}
+
 .diagram-card,
 .comparison-card {
   padding: 0.18in;
@@ -804,6 +822,10 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.analysis-note {
+  margin-top: 2px;
+}
+
 .mistake-list {
   display: grid;
   gap: 14px;
@@ -900,6 +922,23 @@ body {
   font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.closing-points {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.closing-points div {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #1e293b;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 500;
 }
 
 .closing-visual svg {
@@ -1114,5 +1153,186 @@ body {
     right: 0.42in;
     bottom: 0.28in;
     font-size: 10px;
+  }
+
+  .eyes-sheet .page-shell,
+  .artifact-sheet .page-shell,
+  .bands-sheet .page-shell,
+  .examples-sheet .page-shell,
+  .analysis-sheet .page-shell,
+  .closing-sheet .page-shell {
+    padding: 0.46in 0.48in 0.5in;
+  }
+
+  .eyes-sheet .page-top,
+  .artifact-sheet .page-top,
+  .bands-sheet .page-top,
+  .examples-sheet .page-top,
+  .analysis-sheet .page-top {
+    margin-bottom: 0.22in;
+  }
+
+  .eyes-sheet .page-top h2,
+  .artifact-sheet .page-top h2,
+  .bands-sheet .page-top h2,
+  .examples-sheet .page-top h2,
+  .analysis-sheet .page-top h2,
+  .closing-copy h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .eyes-sheet .lead,
+  .artifact-sheet .section-intro,
+  .examples-sheet .section-intro,
+  .analysis-sheet .section-intro,
+  .closing-sheet .lead {
+    font-size: 15px;
+    line-height: 1.48;
+  }
+
+  .eyes-sheet p,
+  .artifact-sheet p,
+  .bands-sheet .summary-table > div,
+  .examples-sheet p,
+  .analysis-sheet p,
+  .closing-sheet p {
+    line-height: 1.46;
+  }
+
+  .eyes-sheet .two-column {
+    gap: 0.24in;
+  }
+
+  .eyes-sheet .takeaway-box,
+  .eyes-sheet .support-card,
+  .artifact-sheet .artifact-callout,
+  .analysis-sheet .analysis-note {
+    margin-top: 16px;
+    padding: 0.17in 0.19in;
+  }
+
+  .eyes-sheet .support-list {
+    gap: 6px;
+    font-size: 12.8px;
+    line-height: 1.38;
+  }
+
+  .artifact-sheet .artifact-grid,
+  .examples-sheet .example-grid {
+    gap: 12px;
+  }
+
+  .artifact-sheet .artifact-card,
+  .examples-sheet .example-card,
+  .analysis-sheet .analysis-card {
+    padding: 0.17in 0.18in;
+  }
+
+  .artifact-sheet .artifact-card h3,
+  .analysis-sheet .analysis-card h3,
+  .examples-sheet .example-title {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .artifact-sheet .artifact-strip {
+    gap: 10px 14px;
+    margin-top: 16px;
+  }
+
+  .artifact-sheet .artifact-trace {
+    padding-top: 8px;
+  }
+
+  .artifact-sheet .artifact-trace span {
+    margin-bottom: 6px;
+    font-size: 11px;
+  }
+
+  .bands-sheet .spectrum-card {
+    padding: 16px 18px 18px;
+  }
+
+  .bands-sheet .spectrum-scale {
+    margin-bottom: 10px;
+  }
+
+  .bands-sheet .band-bar {
+    height: 46px;
+    font-size: 12px;
+  }
+
+  .bands-sheet .summary-table {
+    margin-top: 14px;
+  }
+
+  .bands-sheet .summary-table > div {
+    padding: 11px;
+    font-size: 12.3px;
+    line-height: 1.34;
+  }
+
+  .examples-sheet .example-card svg {
+    margin: 8px 0 10px;
+  }
+
+  .examples-sheet .example-card p {
+    font-size: 12.8px;
+    line-height: 1.42;
+  }
+
+  .analysis-sheet .analysis-layout {
+    gap: 14px;
+  }
+
+  .analysis-sheet .workflow-card {
+    padding: 14px 18px 18px;
+  }
+
+  .analysis-sheet .workflow-row {
+    gap: 8px;
+  }
+
+  .analysis-sheet .workflow-row span {
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+
+  .analysis-sheet .analysis-grid {
+    gap: 10px;
+  }
+
+  .analysis-sheet .analysis-card p {
+    font-size: 12.8px;
+    line-height: 1.38;
+  }
+
+  .closing-card {
+    gap: 0.28in;
+    padding: 0.28in;
+    min-height: auto;
+    align-items: start;
+  }
+
+  .closing-sheet .closing-points {
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .closing-sheet .closing-points div {
+    padding: 8px 10px;
+    font-size: 12.8px;
+    line-height: 1.34;
+  }
+
+  .closing-sheet .cta-link {
+    margin-top: 18px;
+    padding: 12px 20px;
+  }
+
+  .closing-sheet .cta-url {
+    margin-top: 10px;
+    font-size: 12px;
   }
 }

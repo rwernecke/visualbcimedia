@@ -1,0 +1,283 @@
+:root {
+  --bg: #050914;
+  --ink: #f4f8ff;
+  --muted: rgba(219, 231, 255, 0.62);
+  --accent: #62e8ff;
+  --accent-2: #8f94ff;
+  --frame-width: min(100vw, calc(100vh * 9 / 16));
+  --frame-height: min(100vh, calc(100vw * 16 / 9));
+  --safe-pad: clamp(26px, 4vw, 42px);
+  --title-font: "Arial Black", Impact, Haettenschweiler, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top, rgba(17, 41, 84, 0.72), transparent 34%),
+    linear-gradient(180deg, #03060d 0%, #050913 55%, #02040b 100%);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.frame {
+  position: relative;
+  width: var(--frame-width);
+  height: var(--frame-height);
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(103, 165, 255, 0.12), transparent 24%),
+    linear-gradient(180deg, #040916 0%, #07101f 45%, #030712 100%);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 30px 90px rgba(0, 0, 0, 0.48);
+}
+
+.aura,
+.noise,
+.vignette,
+.grid,
+.signal-core {
+  position: absolute;
+  inset: 0;
+}
+
+.aura {
+  border-radius: 50%;
+  filter: blur(26px);
+  animation: drift 12s ease-in-out infinite;
+}
+
+.aura-one {
+  width: 72%;
+  height: 34%;
+  left: -20%;
+  top: 6%;
+  background: radial-gradient(circle, rgba(96, 136, 255, 0.22), rgba(96, 136, 255, 0));
+}
+
+.aura-two {
+  width: 62%;
+  height: 32%;
+  right: -16%;
+  bottom: 14%;
+  background: radial-gradient(circle, rgba(79, 223, 255, 0.18), rgba(79, 223, 255, 0));
+  animation-delay: -5s;
+}
+
+.noise {
+  opacity: 0.09;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 3px 3px;
+  mix-blend-mode: soft-light;
+}
+
+.vignette {
+  background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.62) 100%);
+}
+
+.copy {
+  position: absolute;
+  inset: 11% var(--safe-pad) auto var(--safe-pad);
+  z-index: 2;
+}
+
+.copy-lines {
+  display: grid;
+  gap: 8px;
+  max-width: 82%;
+  min-height: 38vh;
+}
+
+.line {
+  margin: 0;
+  font-family: var(--title-font);
+  font-size: clamp(42px, 8.8vw, 88px);
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translate3d(0, 30px, 0) scale(0.96);
+  transition:
+    opacity 520ms cubic-bezier(0.18, 0.9, 0.22, 1),
+    transform 520ms cubic-bezier(0.18, 0.9, 0.22, 1),
+    color 260ms ease,
+    text-shadow 260ms ease;
+  color: rgba(244, 248, 255, 0.72);
+}
+
+.line.size-sm {
+  font-size: clamp(38px, 7vw, 70px);
+}
+
+.line.size-md {
+  font-size: clamp(48px, 8vw, 82px);
+}
+
+.line.size-lg {
+  font-size: clamp(58px, 9.8vw, 100px);
+}
+
+.line.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.line.is-exiting {
+  opacity: 0;
+  transform: translate3d(0, -18px, 0) scale(1.01);
+}
+
+.line .emphasis {
+  color: #ffffff;
+  text-shadow:
+    0 0 30px rgba(98, 232, 255, 0.16),
+    0 12px 28px rgba(0, 0, 0, 0.32);
+}
+
+.line .glow {
+  color: var(--accent);
+  text-shadow:
+    0 0 34px rgba(98, 232, 255, 0.35),
+    0 12px 28px rgba(0, 0, 0, 0.34);
+}
+
+.signal-stage {
+  position: absolute;
+  inset: 0;
+}
+
+.grid {
+  opacity: 0.16;
+  background-image:
+    linear-gradient(rgba(98, 232, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(98, 232, 255, 0.08) 1px, transparent 1px);
+  background-size: 100% 9%, 9% 100%;
+  mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.76) 24%, rgba(0, 0, 0, 1) 100%);
+}
+
+.signal-core {
+  inset: auto 8% 10% 8%;
+  height: 28%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(79, 223, 255, 0.12), rgba(79, 223, 255, 0));
+  filter: blur(22px);
+  animation: breathe 12s ease-in-out infinite;
+}
+
+.signal-svg {
+  position: absolute;
+  left: -6%;
+  right: -6%;
+  bottom: 5%;
+  width: 112%;
+  height: 48%;
+}
+
+.signal-glow,
+.signal-line {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.signal-glow {
+  stroke: url(#pulseGlow);
+  stroke-width: 14;
+  filter: url(#pulseBlur);
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2400;
+  animation:
+    draw 12s linear infinite,
+    signalPulse 12s ease-in-out infinite;
+}
+
+.signal-line {
+  stroke: rgba(239, 247, 255, 0.94);
+  stroke-width: 3.2;
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2400;
+  animation: draw 12s linear infinite;
+}
+
+@keyframes draw {
+  0%,
+  4% {
+    stroke-dashoffset: 2400;
+    opacity: 0;
+  }
+  9% {
+    opacity: 1;
+  }
+  82% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -180;
+    opacity: 0.28;
+  }
+}
+
+@keyframes signalPulse {
+  0%,
+  100% {
+    opacity: 0.78;
+  }
+  22%,
+  58%,
+  84% {
+    opacity: 1;
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.06);
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(0.96);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 520px) {
+  .copy-lines {
+    max-width: 92%;
+  }
+}

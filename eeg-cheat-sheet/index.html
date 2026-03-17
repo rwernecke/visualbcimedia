@@ -462,7 +462,7 @@
         </div>
       </section>
 
-      <section class="sheet">
+      <section class="sheet eyes-sheet">
         <div class="page-shell">
           <div class="page-top">
             <div class="section-eyebrow">04</div>
@@ -479,12 +479,26 @@
                 where visual processing is heavily represented. When the eyes
                 open, the rhythm often becomes less obvious.
               </p>
+              <p>
+                In VisualBCI, this is easiest to spot by comparing the same
+                posterior channels across short eyes-open and eyes-closed
+                segments instead of comparing unrelated moments from different
+                parts of a session.
+              </p>
               <div class="takeaway-box">
                 <div class="card-label">Takeaway</div>
                 <p>
                   Closing your eyes often increases alpha rhythm because the
                   visual system is less engaged.
                 </p>
+              </div>
+              <div class="support-card eyes-support">
+                <div class="card-label">What to look for</div>
+                <ul class="support-list">
+                  <li>A clearer repeating rhythm over posterior channels</li>
+                  <li>A stronger alpha pattern without assuming every subject looks the same</li>
+                  <li>Consistent comparisons: same channel, same posture, similar alertness</li>
+                </ul>
               </div>
             </div>
             <div class="comparison-card">
@@ -513,7 +527,7 @@
         </div>
       </section>
 
-      <section class="sheet">
+      <section class="sheet artifact-sheet">
         <div class="page-shell">
           <div class="page-top">
             <div class="section-eyebrow">05</div>
@@ -643,7 +657,7 @@
         </div>
       </section>
 
-      <section class="sheet">
+      <section class="sheet examples-sheet">
         <div class="page-shell">
           <div class="page-top">
             <div class="section-eyebrow">07</div>
@@ -689,11 +703,16 @@
         </div>
       </section>
 
-      <section class="sheet">
+      <section class="sheet analysis-sheet">
         <div class="page-shell">
           <div class="page-top">
             <div class="section-eyebrow">08</div>
             <h2>How EEG Analysis Works</h2>
+            <p class="section-intro">
+              The important shift for beginners is moving from “this trace looks
+              interesting” to a repeatable process for checking quality,
+              comparing conditions, and only then drawing conclusions.
+            </p>
           </div>
           <div class="analysis-layout">
             <div class="workflow-card">
@@ -732,6 +751,14 @@
                 <p>Context matters: task, subject state, channel location, and artifact all shape the reading.</p>
               </article>
             </div>
+            <aside class="callout analysis-note">
+              <div class="card-label">Beginner habit that helps</div>
+              <p>
+                When something looks meaningful, first ask whether it repeats,
+                whether it changes across conditions, and whether artifact could
+                explain it just as well.
+              </p>
+            </aside>
           </div>
         </div>
       </section>
@@ -755,6 +782,11 @@
                 VisualBCI visualizations designed to make brain activity easier
                 to interpret.
               </p>
+              <div class="closing-points">
+                <div>Compare conditions like eyes open versus eyes closed</div>
+                <div>Review raw traces, spectra, and channel-level patterns</div>
+                <div>Build intuition about rhythm changes, artifacts, and signal quality</div>
+              </div>
               <a class="cta-link" href="https://visualbci.com">Explore VisualBCI</a>
               <div class="cta-url">visualbci.com</div>
             </div>

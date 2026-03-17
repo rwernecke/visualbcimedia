@@ -1,3 +1,0 @@
-file '/Users/rafael/visualbcimedia/visualbci_video_pipeline/audio/01_beginner_mistake.wav'
-file '/Users/rafael/visualbcimedia/visualbci_video_pipeline/audio/02_brain_electricity.wav'
-file '/Users/rafael/visualbcimedia/visualbci_video_pipeline/audio/03_no_phd.wav'

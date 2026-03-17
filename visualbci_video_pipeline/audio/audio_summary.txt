@@ -1,7 +1,0 @@
-Voice engine: ElevenLabs
-Voice target: Daniel - Steady Broadcaster
-Voice status: configured
-
-01 Your Brain Can Fake a Signal: 12.25s
-02 Your Brain Produces Electricity: 9.22s
-03 You Do Not Need a PhD: 10.89s
